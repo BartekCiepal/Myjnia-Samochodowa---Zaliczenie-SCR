@@ -1,0 +1,871 @@
+<?xml version="1.0" encoding="ASCII"?>
+<diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
+  <element uuid="4e6d4378-ce57-4c6f-99db-5ca7549e6a1f" manual="true">
+    <element uuid="050b735d-5fa2-4fb3-a3fb-f0c955db22cc" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>Magistrala_1</seg>
+      </bo>
+      <position x="1027.0078125" y="57.0"/>
+      <size width="128.33463287353516" height="50.0"/>
+    </element>
+    <element uuid="d2d1629f-fc34-4e7d-ab86-18831a610597" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>Magistrala_2</seg>
+      </bo>
+      <position x="1027.0078125" y="640.0"/>
+      <size width="128.33463287353516" height="50.0"/>
+    </element>
+    <element uuid="2e17b0a2-39e9-48d9-a251-d57a8258436e" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>Magistrala_3</seg>
+      </bo>
+      <position x="1027.0078125" y="1151.0"/>
+      <size width="128.33463287353516" height="50.0"/>
+    </element>
+    <element uuid="5c7f709d-b327-4fc1-a5ac-eca4b1646967" manual="true">
+      <element uuid="6ad379f3-c87e-4bf4-9868-42ee18759ba8" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>in_czas_mycia</seg>
+        </bo>
+        <position y="60.0"/>
+      </element>
+      <element uuid="b37fd6de-b866-405d-bfdf-fe5265ca6741" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>in_wybrany_tryb</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>Panel_Info</seg>
+      </bo>
+      <position x="1027.0078125" y="288.0"/>
+      <size width="339.11197662353516" height="110.0"/>
+    </element>
+    <element uuid="b951db26-1421-467a-81cc-5560d45fb4f5" manual="true">
+      <element uuid="2d082aa8-e867-4146-b83b-2db0bf3d52d8" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>magistrala_1_dostep</seg>
+        </bo>
+        <position x="290.77733612060547" y="10.0"/>
+      </element>
+      <element uuid="13af285a-5a14-4658-9bdf-04ea984ead8f" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>magistrala_2_dostep</seg>
+        </bo>
+        <position x="290.77733612060547" y="410.0"/>
+      </element>
+      <element uuid="2a991661-6b40-4a1e-82e2-15d6c0e2b4af" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>out_Mycie_Szamponem</seg>
+        </bo>
+        <position x="271.52603912353516" y="310.0"/>
+      </element>
+      <element uuid="f7c157b8-62fb-418b-aedd-7a6913811350" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>out_Nablyszczanie</seg>
+        </bo>
+        <position x="302.64583587646484" y="160.0"/>
+      </element>
+      <element uuid="868e1761-210e-43e6-945f-384d9ff3dd77" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>out_Osuszanie</seg>
+        </bo>
+        <position x="325.6145782470703" y="110.0"/>
+      </element>
+      <element uuid="12aee766-9e30-427f-87ff-cae5a06aaa0d" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>out_Otwor_na_monety</seg>
+        </bo>
+        <position x="279.6640396118164" y="60.0"/>
+      </element>
+      <element uuid="a4c893b2-2b85-4f6c-a1cd-f10c80d2cdf8" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>out_Piana_Aktywna</seg>
+        </bo>
+        <position x="296.7018280029297" y="210.0"/>
+      </element>
+      <element uuid="77003d2b-1957-45a9-8d4a-bb47e4f2a0fa" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>out_Powloka_Ochronna</seg>
+        </bo>
+        <position x="272.24219512939453" y="260.0"/>
+      </element>
+      <element uuid="4debbca4-5d89-4b7d-a77e-8ae36ed215a6" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>out_Splukiwanie</seg>
+        </bo>
+        <position x="317.45702362060547" y="360.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>Panel_Op</seg>
+      </bo>
+      <position x="15.71746826171875" y="38.0"/>
+      <size width="426.55989837646484" height="460.0"/>
+    </element>
+    <element uuid="6fc5b955-5052-4d2b-8b7b-7b06e9ef4cb7" manual="true">
+      <element uuid="7054e6b4-876f-43b7-8b55-9699c59af024" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>bus_access</seg>
+        </bo>
+        <position x="272.2552032470703" y="60.0"/>
+      </element>
+      <element uuid="f34e4b81-382a-41c7-ac3b-3f0d0ee8e389" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>in_monety</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="e0abcd68-c67d-4b27-b5ad-1c98e0473d1d" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>in_nablyszczanie</seg>
+        </bo>
+        <position y="110.0"/>
+      </element>
+      <element uuid="f8aefe67-a6d1-4df1-b513-4ce5faeccfa1" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>in_osuszanie</seg>
+        </bo>
+        <position y="60.0"/>
+      </element>
+      <element uuid="aaa0a13c-bad6-4b66-8da8-4cff1a210661" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>in_piana</seg>
+        </bo>
+        <position y="160.0"/>
+      </element>
+      <element uuid="77abc917-e1e0-49c4-a600-e859f289ca13" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>in_powloka</seg>
+        </bo>
+        <position y="210.0"/>
+      </element>
+      <element uuid="fbbd19f4-3023-41e6-942a-b3c0ef01f70b" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>in_splukiwanie</seg>
+        </bo>
+        <position y="310.0"/>
+      </element>
+      <element uuid="1a76be58-068a-4de3-b8fd-7932f62d6f58" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>in_szampon</seg>
+        </bo>
+        <position y="260.0"/>
+      </element>
+      <element uuid="74973510-0457-4d1e-93e8-9c12a67b1220" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>out_czas</seg>
+        </bo>
+        <position x="289.2994728088379" y="260.0"/>
+      </element>
+      <element uuid="4c131e26-1c8c-4e1d-872c-ba082a083113" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>out_wybrany_tryb</seg>
+        </bo>
+        <position x="237.42447662353516" y="160.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>Procesor_1</seg>
+      </bo>
+      <position x="568.2968765258789" y="88.0"/>
+      <size width="354.6653594970703" height="360.0"/>
+    </element>
+    <element uuid="a98910b7-386b-48e2-b917-fccd3072c12a" manual="true">
+      <element uuid="a1e2035f-ca8e-4753-8e55-f78ed30ab531" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>bus_access</seg>
+        </bo>
+        <position x="392.3203125" y="160.0"/>
+      </element>
+      <element uuid="b06764f7-9838-44f3-a59b-7459f90f2f71" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>in_nablyszczanie</seg>
+        </bo>
+        <position y="60.0"/>
+      </element>
+      <element uuid="02236500-0647-4380-a1c5-ec00db8a1ab4" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>in_osuszanie</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="a28a6502-ccae-43c9-bbce-46d735cf4ca7" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>in_piana</seg>
+        </bo>
+        <position y="110.0"/>
+      </element>
+      <element uuid="23886908-37c6-441b-b32f-f08c1abecadf" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>in_powloka</seg>
+        </bo>
+        <position y="160.0"/>
+      </element>
+      <element uuid="6519ccc7-f6ba-4cfc-923b-449c24238740" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>in_splukiwanie</seg>
+        </bo>
+        <position y="260.0"/>
+      </element>
+      <element uuid="166557e3-4669-462e-9d8e-53a79426597b" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>in_szampon</seg>
+        </bo>
+        <position y="210.0"/>
+      </element>
+      <element uuid="f156fd4a-a0b1-47de-878f-77a5ff334d75" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>out_sterowanie_zbiornikami</seg>
+        </bo>
+        <position y="310.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>Procesor_2</seg>
+      </bo>
+      <position x="532.27734375" y="468.0"/>
+      <size width="474.73046875" height="360.0"/>
+    </element>
+    <element uuid="8b25e855-5361-40ac-a93c-20719f4d0769" manual="true">
+      <element uuid="c2edb1b3-160e-41e8-a066-c2bf8dc28d7d" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>bus_access</seg>
+        </bo>
+        <position x="298.9609375" y="240.0"/>
+      </element>
+      <element uuid="134c911d-907b-411b-bb5f-843e5dd21bc8" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>in_nablyszczacz</seg>
+        </bo>
+        <position y="160.0"/>
+      </element>
+      <element uuid="058de92a-ecd9-44a8-8bac-d5b211606170" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>in_piana</seg>
+        </bo>
+        <position y="110.0"/>
+      </element>
+      <element uuid="a89c5ee5-20d5-4141-aab4-6ca70fc4b208" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>in_powietrze</seg>
+        </bo>
+        <position y="260.0"/>
+      </element>
+      <element uuid="a24112c6-9f84-4e13-8e22-66b347c86f00" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>in_powloka</seg>
+        </bo>
+        <position y="210.0"/>
+      </element>
+      <element uuid="97c24495-239e-4349-a292-36a7777b8e99" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>in_szampon</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="f93e5434-7b34-4edd-bfd9-7998db5b1301" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>in_woda</seg>
+        </bo>
+        <position y="60.0"/>
+      </element>
+      <element uuid="41963709-4575-4776-bcda-a4f62d9bcf07" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>out_do_kompresora</seg>
+        </bo>
+        <position x="250.77734375" y="30.0"/>
+      </element>
+      <element uuid="58612bd1-1a38-4633-95e5-eba86b211763" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>out_do_lancy</seg>
+        </bo>
+        <position x="290.0481872558594" y="100.0"/>
+      </element>
+      <element uuid="1a3f6eb8-1366-4ab8-990d-86514d548887" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>out_do_myjki</seg>
+        </bo>
+        <position x="290.80989837646484" y="170.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>Procesor_3</seg>
+      </bo>
+      <position x="569.62109375" y="849.0"/>
+      <size width="381.37109375" height="310.0"/>
+    </element>
+    <element uuid="0ac2121d-613f-4a21-b99c-1c166e022952" manual="true">
+      <element uuid="57a32109-17c2-4115-9187-104af522e37e" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>in_cisnienie</seg>
+        </bo>
+        <position y="110.0"/>
+      </element>
+      <element uuid="cff94fff-8be8-4632-914a-00f0dc723387" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>in_piana</seg>
+        </bo>
+        <position y="60.0"/>
+      </element>
+      <element uuid="f38103b5-2d0a-4156-b007-1930cc1b1142" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>in_powietrze</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>Zesp_Koncowek</seg>
+      </bo>
+      <position x="1027.0078125" y="909.0"/>
+      <size width="329.47654724121094" height="160.0"/>
+    </element>
+    <element uuid="52c4dae5-f0bb-4009-8fb9-40ca6f6f99fa" manual="true">
+      <element uuid="6313c298-0fac-4244-bd4b-ff040565cc2a" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>in_sterowanie</seg>
+        </bo>
+        <position x="336.0052261352539" y="10.0"/>
+      </element>
+      <element uuid="6a286c86-6c86-4f01-b655-7bb625897467" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>magistrala_3_dostep</seg>
+        </bo>
+        <position x="294.4948043823242" y="360.0"/>
+      </element>
+      <element uuid="18727c1d-c625-4e8c-9f3f-1d979cd699d2" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>out_nablyszczacz</seg>
+        </bo>
+        <position x="313.0364990234375" y="210.0"/>
+      </element>
+      <element uuid="508a79e7-1bd0-48cb-a207-ce81788d4601" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>out_piana</seg>
+        </bo>
+        <position x="359.7031555175781" y="160.0"/>
+      </element>
+      <element uuid="187fcc78-4db5-4129-ac7a-425a3cf092cf" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>out_powietrze</seg>
+        </bo>
+        <position x="335.26305389404297" y="310.0"/>
+      </element>
+      <element uuid="b9782ecc-8d2b-4253-b6ad-3ce47bfffba6" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>out_powloka</seg>
+        </bo>
+        <position x="343.40757751464844" y="260.0"/>
+      </element>
+      <element uuid="097fef52-4876-44cf-9a64-93723a89213f" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>out_szampon</seg>
+        </bo>
+        <position x="338.22528076171875" y="60.0"/>
+      </element>
+      <element uuid="3a15ee1c-5580-4fba-a752-0a147147b837" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>out_woda</seg>
+        </bo>
+        <position x="360.4518508911133" y="110.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>Zesp_Zbiornikow</seg>
+      </bo>
+      <position x="12.0" y="799.0"/>
+      <size width="430.2773666381836" height="410.0"/>
+    </element>
+    <element uuid="f09de7e7-11e8-4256-8323-260c049b5c1c" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>b1_acc_p1 : Myjnia_Samochodowa_impl_Instance.Magistrala_1 -> Myjnia_Samochodowa_impl_Instance.Procesor_1.bus_access</seg>
+      </bo>
+      <bendpoints>
+        <point x="1023.0078125" y="87.0"/>
+        <point x="1017.0078125" y="87.0"/>
+        <point x="1017.0078125" y="180.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="04dd7b5c-677f-40bf-a9a8-3ff480327b65" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>b1_acc_p1 : Myjnia_Samochodowa_impl_Instance.Procesor_1.bus_access -> Myjnia_Samochodowa_impl_Instance.Magistrala_1</seg>
+      </bo>
+      <bendpoints>
+        <point x="1017.0078125" y="180.0"/>
+        <point x="1017.0078125" y="97.0"/>
+        <point x="1023.0078125" y="97.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="4422191a-267a-4d33-bad2-a77eba0e7217" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>b1_acc_panel : Myjnia_Samochodowa_impl_Instance.Magistrala_1 -> Myjnia_Samochodowa_impl_Instance.Panel_Op.magistrala_1_dostep</seg>
+      </bo>
+      <bendpoints>
+        <point x="1023.0078125" y="67.0"/>
+        <point x="1017.0078125" y="67.0"/>
+        <point x="1017.0078125" y="77.0"/>
+        <point x="452.2773742675781" y="77.0"/>
+        <point x="452.2773742675781" y="80.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="41b4d55b-05aa-4368-bf1c-81174c500c5f" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>b1_acc_panel : Myjnia_Samochodowa_impl_Instance.Panel_Op.magistrala_1_dostep -> Myjnia_Samochodowa_impl_Instance.Magistrala_1</seg>
+      </bo>
+      <bendpoints>
+        <point x="452.2773742675781" y="80.0"/>
+        <point x="452.2773742675781" y="77.0"/>
+        <point x="1023.0078125" y="77.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="9ba91cf0-81eb-4dcc-8615-6ad9d001888c" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>b2_acc_p2 : Myjnia_Samochodowa_impl_Instance.Magistrala_2 -> Myjnia_Samochodowa_impl_Instance.Procesor_2.bus_access</seg>
+      </bo>
+      <bendpoints>
+        <point x="1027.0078125" y="660.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="48b99430-0871-4051-9c67-940f2ebceddd" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>b2_acc_p2 : Myjnia_Samochodowa_impl_Instance.Procesor_2.bus_access -> Myjnia_Samochodowa_impl_Instance.Magistrala_2</seg>
+      </bo>
+      <bendpoints>
+        <point x="1017.0078125" y="660.0"/>
+        <point x="1017.0078125" y="650.0"/>
+        <point x="1023.0078125" y="650.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="41feb19f-36fa-495d-a89b-b4c6fe750a81" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>b2_acc_panel : Myjnia_Samochodowa_impl_Instance.Magistrala_2 -> Myjnia_Samochodowa_impl_Instance.Panel_Op.magistrala_2_dostep</seg>
+      </bo>
+      <bendpoints>
+        <point x="1023.0078125" y="670.0"/>
+        <point x="1017.0078125" y="670.0"/>
+        <point x="1017.0078125" y="838.0"/>
+        <point x="462.2773742675781" y="838.0"/>
+        <point x="462.2773742675781" y="480.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="47fa15cc-bfff-44a5-863f-d5ba465b5b1f" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>b2_acc_panel : Myjnia_Samochodowa_impl_Instance.Panel_Op.magistrala_2_dostep -> Myjnia_Samochodowa_impl_Instance.Magistrala_2</seg>
+      </bo>
+      <bendpoints>
+        <point x="462.2773742675781" y="480.0"/>
+        <point x="462.2773742675781" y="838.0"/>
+        <point x="1017.0078125" y="838.0"/>
+        <point x="1017.0078125" y="680.0"/>
+        <point x="1023.0078125" y="680.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="b163cdc2-7480-4b57-bc23-4e1dfa58bbaf" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>b3_acc_p3 : Myjnia_Samochodowa_impl_Instance.Magistrala_3 -> Myjnia_Samochodowa_impl_Instance.Procesor_3.bus_access</seg>
+      </bo>
+      <bendpoints>
+        <point x="1023.0078125" y="1161.0"/>
+        <point x="1017.0078125" y="1161.0"/>
+        <point x="1017.0078125" y="1121.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="4af6c26b-1a30-42ad-bfbf-19228f2027c7" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>b3_acc_p3 : Myjnia_Samochodowa_impl_Instance.Procesor_3.bus_access -> Myjnia_Samochodowa_impl_Instance.Magistrala_3</seg>
+      </bo>
+      <bendpoints>
+        <point x="1017.0078125" y="1121.0"/>
+        <point x="1017.0078125" y="1171.0"/>
+        <point x="1023.0078125" y="1171.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="b67fd239-460a-44a9-9529-0f0d9fee0624" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>b3_acc_zbior : Myjnia_Samochodowa_impl_Instance.Magistrala_3 -> Myjnia_Samochodowa_impl_Instance.Zesp_Zbiornikow.magistrala_3_dostep</seg>
+      </bo>
+      <bendpoints>
+        <point x="1023.0078125" y="1181.0"/>
+        <point x="1017.0078125" y="1181.0"/>
+        <point x="1017.0078125" y="1191.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="d44dba96-c940-41e2-bbae-fe3aaf202978" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>b3_acc_zbior : Myjnia_Samochodowa_impl_Instance.Zesp_Zbiornikow.magistrala_3_dostep -> Myjnia_Samochodowa_impl_Instance.Magistrala_3</seg>
+      </bo>
+      <bendpoints>
+        <point x="1027.0078125" y="1191.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="29c8fa90-3cd3-49f4-971e-e80200f2cc7b" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c_info_czas : Myjnia_Samochodowa_impl_Instance.Procesor_1.out_czas -> Myjnia_Samochodowa_impl_Instance.Panel_Info.in_czas_mycia</seg>
+      </bo>
+    </element>
+    <element uuid="0e597d46-6b9a-4309-b6a6-0d3d3654630c" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c_info_nabl : Myjnia_Samochodowa_impl_Instance.Panel_Op.out_Nablyszczanie -> Myjnia_Samochodowa_impl_Instance.Procesor_1.in_nablyszczanie</seg>
+      </bo>
+    </element>
+    <element uuid="56207654-535d-47f6-9e3b-52a2efba1cf9" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c_info_osus : Myjnia_Samochodowa_impl_Instance.Panel_Op.out_Osuszanie -> Myjnia_Samochodowa_impl_Instance.Procesor_1.in_osuszanie</seg>
+      </bo>
+    </element>
+    <element uuid="4d278f4b-437f-4914-b617-da2bab09ec0d" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c_info_piana : Myjnia_Samochodowa_impl_Instance.Panel_Op.out_Piana_Aktywna -> Myjnia_Samochodowa_impl_Instance.Procesor_1.in_piana</seg>
+      </bo>
+    </element>
+    <element uuid="f6eece24-c1ad-483d-8eb3-377d5ccf9ab6" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c_info_powl : Myjnia_Samochodowa_impl_Instance.Panel_Op.out_Powloka_Ochronna -> Myjnia_Samochodowa_impl_Instance.Procesor_1.in_powloka</seg>
+      </bo>
+    </element>
+    <element uuid="0ba94201-f2ab-4075-b253-7481c4036dfd" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c_info_spluk : Myjnia_Samochodowa_impl_Instance.Panel_Op.out_Splukiwanie -> Myjnia_Samochodowa_impl_Instance.Procesor_1.in_splukiwanie</seg>
+      </bo>
+    </element>
+    <element uuid="89803651-4ff1-4174-920c-cbb980a44425" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c_info_szampon : Myjnia_Samochodowa_impl_Instance.Panel_Op.out_Mycie_Szamponem -> Myjnia_Samochodowa_impl_Instance.Procesor_1.in_szampon</seg>
+      </bo>
+    </element>
+    <element uuid="75ee9095-1cbe-4039-9b44-41edd2e84008" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c_info_tryb : Myjnia_Samochodowa_impl_Instance.Procesor_1.out_wybrany_tryb -> Myjnia_Samochodowa_impl_Instance.Panel_Info.in_wybrany_tryb</seg>
+      </bo>
+      <bendpoints>
+        <point x="1017.0078125" y="280.0"/>
+        <point x="1017.0078125" y="330.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="f002ca97-3947-4474-8ae9-d57c4f41c8a1" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c_konc_kompr : Myjnia_Samochodowa_impl_Instance.Procesor_3.out_do_kompresora -> Myjnia_Samochodowa_impl_Instance.Zesp_Koncowek.in_powietrze</seg>
+      </bo>
+      <bendpoints>
+        <point x="1017.0078125" y="911.0"/>
+        <point x="1017.0078125" y="951.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="bb0e8173-93b0-4522-8a4f-80cb686249d2" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c_konc_myjka : Myjnia_Samochodowa_impl_Instance.Procesor_3.out_do_myjki -> Myjnia_Samochodowa_impl_Instance.Zesp_Koncowek.in_cisnienie</seg>
+      </bo>
+    </element>
+    <element uuid="cb71eee9-399a-46d1-a571-954d0821daba" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c_konc_piana : Myjnia_Samochodowa_impl_Instance.Procesor_3.out_do_lancy -> Myjnia_Samochodowa_impl_Instance.Zesp_Koncowek.in_piana</seg>
+      </bo>
+      <bendpoints>
+        <point x="1017.0078125" y="981.0"/>
+        <point x="1017.0078125" y="1001.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="336ed99c-b2b2-406d-9799-2d2b93119436" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c_monety : Myjnia_Samochodowa_impl_Instance.Panel_Op.out_Otwor_na_monety -> Myjnia_Samochodowa_impl_Instance.Procesor_1.in_monety</seg>
+      </bo>
+    </element>
+    <element uuid="3c4f9f69-4284-4281-ba47-b0950229ddb5" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c_ster_zbior : Myjnia_Samochodowa_impl_Instance.Procesor_2.out_sterowanie_zbiornikami -> Myjnia_Samochodowa_impl_Instance.Zesp_Zbiornikow.in_sterowanie</seg>
+      </bo>
+      <bendpoints>
+        <point x="452.2773742675781" y="810.0"/>
+        <point x="452.2773742675781" y="841.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="a17907a6-7a63-4895-8f55-caee85abae97" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c_tryb1 : Myjnia_Samochodowa_impl_Instance.Panel_Op.out_Piana_Aktywna -> Myjnia_Samochodowa_impl_Instance.Procesor_2.in_piana</seg>
+      </bo>
+      <bendpoints>
+        <point x="502.2773742675781" y="280.0"/>
+        <point x="502.2773742675781" y="610.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="f15e6e6e-e0df-4aaf-a8d5-9dc58389b82f" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c_tryb2 : Myjnia_Samochodowa_impl_Instance.Panel_Op.out_Mycie_Szamponem -> Myjnia_Samochodowa_impl_Instance.Procesor_2.in_szampon</seg>
+      </bo>
+      <bendpoints>
+        <point x="482.2773742675781" y="380.0"/>
+        <point x="482.2773742675781" y="710.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="f58ab9bc-8241-49d0-9981-a802f3a014f4" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c_tryb3 : Myjnia_Samochodowa_impl_Instance.Panel_Op.out_Splukiwanie -> Myjnia_Samochodowa_impl_Instance.Procesor_2.in_splukiwanie</seg>
+      </bo>
+      <bendpoints>
+        <point x="472.2773742675781" y="430.0"/>
+        <point x="472.2773742675781" y="760.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="7f8ee117-2d2c-422d-947f-42a0834f3953" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c_tryb4 : Myjnia_Samochodowa_impl_Instance.Panel_Op.out_Nablyszczanie -> Myjnia_Samochodowa_impl_Instance.Procesor_2.in_nablyszczanie</seg>
+      </bo>
+      <bendpoints>
+        <point x="512.27734375" y="230.0"/>
+        <point x="512.27734375" y="560.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="bbb9e0d0-bf8d-4dd7-bb13-854ebac088a3" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c_tryb5 : Myjnia_Samochodowa_impl_Instance.Panel_Op.out_Powloka_Ochronna -> Myjnia_Samochodowa_impl_Instance.Procesor_2.in_powloka</seg>
+      </bo>
+      <bendpoints>
+        <point x="492.2773742675781" y="330.0"/>
+        <point x="492.2773742675781" y="660.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="d1eceed6-ad00-43cc-87e9-49273d50040a" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c_tryb6 : Myjnia_Samochodowa_impl_Instance.Panel_Op.out_Osuszanie -> Myjnia_Samochodowa_impl_Instance.Procesor_2.in_osuszanie</seg>
+      </bo>
+      <bendpoints>
+        <point x="522.27734375" y="180.0"/>
+        <point x="522.27734375" y="510.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="6194e110-3b1e-4f25-b9c5-52edbfb34d20" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c_z_nabl : Myjnia_Samochodowa_impl_Instance.Zesp_Zbiornikow.out_nablyszczacz -> Myjnia_Samochodowa_impl_Instance.Procesor_3.in_nablyszczacz</seg>
+      </bo>
+    </element>
+    <element uuid="ed9a7ea5-1c22-4e98-ab0b-d1b3996a6a21" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c_z_piana : Myjnia_Samochodowa_impl_Instance.Zesp_Zbiornikow.out_piana -> Myjnia_Samochodowa_impl_Instance.Procesor_3.in_piana</seg>
+      </bo>
+    </element>
+    <element uuid="60edad24-2b83-4ba9-8c60-a0f8c1cf392a" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c_z_powietrze : Myjnia_Samochodowa_impl_Instance.Zesp_Zbiornikow.out_powietrze -> Myjnia_Samochodowa_impl_Instance.Procesor_3.in_powietrze</seg>
+      </bo>
+    </element>
+    <element uuid="5f03e767-227a-4b9f-afa7-649a27f89857" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c_z_powl : Myjnia_Samochodowa_impl_Instance.Zesp_Zbiornikow.out_powloka -> Myjnia_Samochodowa_impl_Instance.Procesor_3.in_powloka</seg>
+      </bo>
+    </element>
+    <element uuid="ee24887a-c0ab-40b1-990b-f3265c4175c6" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c_z_szampon : Myjnia_Samochodowa_impl_Instance.Zesp_Zbiornikow.out_szampon -> Myjnia_Samochodowa_impl_Instance.Procesor_3.in_szampon</seg>
+      </bo>
+    </element>
+    <element uuid="bdf34ae3-6fd2-4f50-bacb-dfa1d64da377" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c_z_woda : Myjnia_Samochodowa_impl_Instance.Zesp_Zbiornikow.out_woda -> Myjnia_Samochodowa_impl_Instance.Procesor_3.in_woda</seg>
+      </bo>
+    </element>
+    <bo>
+      <seg>org.osate.ge.diagrams.instance</seg>
+      <seg>system_instance</seg>
+      <seg>/myjnia/instances/myjnia_pkg_myjnia_samochodowa_impl_instance.aaxl2</seg>
+    </bo>
+    <position/>
+    <size width="1378.1197509765625" height="1221.0"/>
+  </element>
+  <config type="structure" connectionPrimaryLabelsVisible="false">
+    <enabledAadlProperties/>
+    <context>
+      <seg>org.osate.ge.diagrams.instance</seg>
+      <seg>system_instance</seg>
+      <seg>/myjnia/instances/myjnia_pkg_myjnia_samochodowa_impl_instance.aaxl2</seg>
+    </context>
+  </config>
+</diagram:Diagram>

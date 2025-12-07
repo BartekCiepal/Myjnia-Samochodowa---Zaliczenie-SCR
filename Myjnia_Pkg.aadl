@@ -1,0 +1,412 @@
+package Myjnia_Package
+public
+
+  data Sygnal
+  end Sygnal;
+
+  bus Magistrala_Danych
+  end Magistrala_Danych;
+
+  -- --------------------------------------------------------
+  -- PROCESORY
+  -- --------------------------------------------------------
+  
+  -- ZMIANA: Procesor 1 teraz widzi też przyciski, żeby wyświetlać info
+  processor Procesor_Glowny_Monety
+    features
+      in_monety: in data port Sygnal;
+      
+      -- Nowe wejścia dla trybów (do wyświetlacza)
+      in_piana: in data port Sygnal;
+      in_szampon: in data port Sygnal;
+      in_splukiwanie: in data port Sygnal;
+      in_nablyszczanie: in data port Sygnal;
+      in_powloka: in data port Sygnal;
+      in_osuszanie: in data port Sygnal;
+
+      out_czas: out data port Sygnal;
+      out_wybrany_tryb: out data port Sygnal;
+      bus_access: requires bus access Magistrala_Danych;
+  end Procesor_Glowny_Monety;
+
+  processor Procesor_Glowny_Tryby
+    features
+      in_piana: in data port Sygnal;
+      in_szampon: in data port Sygnal;
+      in_splukiwanie: in data port Sygnal;
+      in_nablyszczanie: in data port Sygnal;
+      in_powloka: in data port Sygnal;
+      in_osuszanie: in data port Sygnal;
+      
+      out_sterowanie_zbiornikami: out data port Sygnal;
+      bus_access: requires bus access Magistrala_Danych;
+  end Procesor_Glowny_Tryby;
+
+  processor Procesor_Rozdzielacz
+    features
+      in_woda: in data port Sygnal;
+      in_piana: in data port Sygnal;
+      in_szampon: in data port Sygnal;
+      in_nablyszczacz: in data port Sygnal;
+      in_powloka: in data port Sygnal;
+      in_powietrze: in data port Sygnal;
+      
+      out_do_lancy: out data port Sygnal;
+      out_do_myjki: out data port Sygnal;
+      out_do_kompresora: out data port Sygnal;
+      
+      bus_access: requires bus access Magistrala_Danych;
+  end Procesor_Rozdzielacz;
+
+  -- --------------------------------------------------------
+  -- PODSYSTEM 1: PANEL OPERATORSKI
+  -- --------------------------------------------------------
+  device Otwor_na_monety
+    features
+      wyjscie: out data port Sygnal;
+      dostep_do_magistrali: requires bus access Magistrala_Danych;
+  end Otwor_na_monety;
+
+  device Przycisk
+    features
+      wyjscie: out data port Sygnal;
+      dostep_do_magistrali: requires bus access Magistrala_Danych;
+  end Przycisk;
+
+  thread Watek_Sygnalu
+    features
+      wejscie: in data port Sygnal;
+      wyjscie: out data port Sygnal;
+  end Watek_Sygnalu;
+
+  process Proces_Panelu_Operatorskiego
+    features
+      in_monety: in data port Sygnal;
+      in_piana: in data port Sygnal;
+      in_szampon: in data port Sygnal;
+      in_splukiwanie: in data port Sygnal;
+      in_nablyszczanie: in data port Sygnal;
+      in_powloka: in data port Sygnal;
+      in_osuszanie: in data port Sygnal;
+
+      out_monety: out data port Sygnal;
+      out_piana: out data port Sygnal;
+      out_szampon: out data port Sygnal;
+      out_splukiwanie: out data port Sygnal;
+      out_nablyszczanie: out data port Sygnal;
+      out_powloka: out data port Sygnal;
+      out_osuszanie: out data port Sygnal;
+  end Proces_Panelu_Operatorskiego;
+
+  process implementation Proces_Panelu_Operatorskiego.impl
+    subcomponents
+      sygnal_Otwor_na_monety: thread Watek_Sygnalu;
+      sygnal_Piana_Aktywna: thread Watek_Sygnalu;
+      sygnal_Mycie_Szamponem: thread Watek_Sygnalu;
+      sygnal_Splukiwanie: thread Watek_Sygnalu;
+      sygnal_Nablyszczanie: thread Watek_Sygnalu;
+      sygnal_Powloka_Ochronna: thread Watek_Sygnalu;
+      sygnal_Osuszanie: thread Watek_Sygnalu;
+    connections
+      c1: port in_monety -> sygnal_Otwor_na_monety.wejscie;
+      c2: port sygnal_Otwor_na_monety.wyjscie -> out_monety;
+      c3: port in_piana -> sygnal_Piana_Aktywna.wejscie;
+      c4: port sygnal_Piana_Aktywna.wyjscie -> out_piana;
+      c5: port in_szampon -> sygnal_Mycie_Szamponem.wejscie;
+      c6: port sygnal_Mycie_Szamponem.wyjscie -> out_szampon;
+      c7: port in_splukiwanie -> sygnal_Splukiwanie.wejscie;
+      c8: port sygnal_Splukiwanie.wyjscie -> out_splukiwanie;
+      c9: port in_nablyszczanie -> sygnal_Nablyszczanie.wejscie;
+      c10: port sygnal_Nablyszczanie.wyjscie -> out_nablyszczanie;
+      c11: port in_powloka -> sygnal_Powloka_Ochronna.wejscie;
+      c12: port sygnal_Powloka_Ochronna.wyjscie -> out_powloka;
+      c13: port in_osuszanie -> sygnal_Osuszanie.wejscie;
+      c14: port sygnal_Osuszanie.wyjscie -> out_osuszanie;
+  end Proces_Panelu_Operatorskiego.impl;
+
+  system Panel_Operatorski
+    features
+      out_Otwor_na_monety: out data port Sygnal;
+      out_Piana_Aktywna: out data port Sygnal;
+      out_Mycie_Szamponem: out data port Sygnal;
+      out_Splukiwanie: out data port Sygnal;
+      out_Nablyszczanie: out data port Sygnal;
+      out_Powloka_Ochronna: out data port Sygnal;
+      out_Osuszanie: out data port Sygnal; 
+      magistrala_1_dostep: requires bus access Magistrala_Danych;
+      magistrala_2_dostep: requires bus access Magistrala_Danych;
+  end Panel_Operatorski;
+
+  system implementation Panel_Operatorski.impl
+    subcomponents
+      dev_Monety: device Otwor_na_monety;
+      dev_Piana: device Przycisk;
+      dev_Szampon: device Przycisk;
+      dev_Splukiwanie: device Przycisk;
+      dev_Nablyszczanie: device Przycisk;
+      dev_Powloka: device Przycisk;
+      dev_Osuszanie: device Przycisk;
+      proc_Sterowanie: process Proces_Panelu_Operatorskiego.impl;
+    connections
+      conn_mon_in: port dev_Monety.wyjscie -> proc_Sterowanie.in_monety;
+      conn_pia_in: port dev_Piana.wyjscie -> proc_Sterowanie.in_piana;
+      conn_sza_in: port dev_Szampon.wyjscie -> proc_Sterowanie.in_szampon;
+      conn_spl_in: port dev_Splukiwanie.wyjscie -> proc_Sterowanie.in_splukiwanie;
+      conn_nab_in: port dev_Nablyszczanie.wyjscie -> proc_Sterowanie.in_nablyszczanie;
+      conn_pow_in: port dev_Powloka.wyjscie -> proc_Sterowanie.in_powloka;
+      conn_osu_in: port dev_Osuszanie.wyjscie -> proc_Sterowanie.in_osuszanie;
+      
+      conn_mon_out: port proc_Sterowanie.out_monety -> out_Otwor_na_monety;
+      conn_pia_out: port proc_Sterowanie.out_piana -> out_Piana_Aktywna;
+      conn_sza_out: port proc_Sterowanie.out_szampon -> out_Mycie_Szamponem;
+      conn_spl_out: port proc_Sterowanie.out_splukiwanie -> out_Splukiwanie;
+      conn_nab_out: port proc_Sterowanie.out_nablyszczanie -> out_Nablyszczanie;
+      conn_pow_out: port proc_Sterowanie.out_powloka -> out_Powloka_Ochronna;
+      conn_osu_out: port proc_Sterowanie.out_osuszanie -> out_Osuszanie;
+
+      bus_conn_mon: bus access magistrala_1_dostep <-> dev_Monety.dostep_do_magistrali;
+      bus_conn_pia: bus access magistrala_2_dostep <-> dev_Piana.dostep_do_magistrali;
+      bus_conn_sza: bus access magistrala_2_dostep <-> dev_Szampon.dostep_do_magistrali;
+      bus_conn_spl: bus access magistrala_2_dostep <-> dev_Splukiwanie.dostep_do_magistrali;
+      bus_conn_nab: bus access magistrala_2_dostep <-> dev_Nablyszczanie.dostep_do_magistrali;
+      bus_conn_pow: bus access magistrala_2_dostep <-> dev_Powloka.dostep_do_magistrali;
+      bus_conn_osu: bus access magistrala_2_dostep <-> dev_Osuszanie.dostep_do_magistrali;
+  end Panel_Operatorski.impl;
+
+  -- --------------------------------------------------------
+  -- PODSYSTEM 2: PANEL INFORMACYJNY
+  -- --------------------------------------------------------
+  device Wyswietlacz
+    features
+      wejscie: in data port Sygnal;
+  end Wyswietlacz;
+
+  system Panel_Informacyjny
+    features
+      in_czas_mycia: in data port Sygnal;
+      in_wybrany_tryb: in data port Sygnal;
+  end Panel_Informacyjny;
+
+  system implementation Panel_Informacyjny.impl
+    subcomponents
+      wysw_Czas: device Wyswietlacz;
+      wysw_Tryb: device Wyswietlacz;
+    connections
+      c1: port in_czas_mycia -> wysw_Czas.wejscie;
+      c2: port in_wybrany_tryb -> wysw_Tryb.wejscie;
+  end Panel_Informacyjny.impl;
+
+  -- --------------------------------------------------------
+  -- PODSYSTEM 3: ZESPÓŁ ZBIORNIKÓW
+  -- --------------------------------------------------------
+  device Zbiornik
+    features
+      sterowanie: in data port Sygnal;
+      odplyw: out data port Sygnal;
+      dostep_do_magistrali: requires bus access Magistrala_Danych;
+  end Zbiornik;
+
+  process Proces_Zbiornikow
+    features
+      in_woda: in data port Sygnal;
+      in_piana: in data port Sygnal;
+      in_szampon: in data port Sygnal;
+      in_nablyszczacz: in data port Sygnal;
+      in_powloka: in data port Sygnal;
+      in_powietrze: in data port Sygnal;
+      
+      out_woda: out data port Sygnal;
+      out_piana: out data port Sygnal;
+      out_szampon: out data port Sygnal;
+      out_nablyszczacz: out data port Sygnal;
+      out_powloka: out data port Sygnal;
+      out_powietrze: out data port Sygnal;
+  end Proces_Zbiornikow;
+
+  process implementation Proces_Zbiornikow.impl
+    subcomponents
+      sygnal_Zbiornik_Woda: thread Watek_Sygnalu;
+      sygnal_Zbiornik_Piana: thread Watek_Sygnalu;
+      sygnal_Zbiornik_Szampon: thread Watek_Sygnalu;
+      sygnal_Zbiornik_Nablyszczacz: thread Watek_Sygnalu;
+      sygnal_Zbiornik_Powloka: thread Watek_Sygnalu;
+      sygnal_Zbiornik_Powietrze: thread Watek_Sygnalu;
+    connections
+      c_in1: port in_woda -> sygnal_Zbiornik_Woda.wejscie;
+      c_in2: port in_piana -> sygnal_Zbiornik_Piana.wejscie;
+      c_in3: port in_szampon -> sygnal_Zbiornik_Szampon.wejscie;
+      c_in4: port in_nablyszczacz -> sygnal_Zbiornik_Nablyszczacz.wejscie;
+      c_in5: port in_powloka -> sygnal_Zbiornik_Powloka.wejscie;
+      c_in6: port in_powietrze -> sygnal_Zbiornik_Powietrze.wejscie;
+      
+      c_out1: port sygnal_Zbiornik_Woda.wyjscie -> out_woda;
+      c_out2: port sygnal_Zbiornik_Piana.wyjscie -> out_piana;
+      c_out3: port sygnal_Zbiornik_Szampon.wyjscie -> out_szampon;
+      c_out4: port sygnal_Zbiornik_Nablyszczacz.wyjscie -> out_nablyszczacz;
+      c_out5: port sygnal_Zbiornik_Powloka.wyjscie -> out_powloka;
+      c_out6: port sygnal_Zbiornik_Powietrze.wyjscie -> out_powietrze;
+  end Proces_Zbiornikow.impl;
+
+  system Zespol_Zbiornikow
+    features
+      in_sterowanie: in data port Sygnal;
+      
+      out_woda: out data port Sygnal;
+      out_piana: out data port Sygnal;
+      out_szampon: out data port Sygnal;
+      out_nablyszczacz: out data port Sygnal;
+      out_powloka: out data port Sygnal;
+      out_powietrze: out data port Sygnal;
+      
+      magistrala_3_dostep: requires bus access Magistrala_Danych;
+  end Zespol_Zbiornikow;
+
+  system implementation Zespol_Zbiornikow.impl
+    subcomponents
+      zb_Woda: device Zbiornik;
+      zb_Piana: device Zbiornik;
+      zb_Szampon: device Zbiornik;
+      zb_Nablyszczacz: device Zbiornik;
+      zb_Powloka: device Zbiornik;
+      zb_Powietrze: device Zbiornik;
+      proc_Zbiornikow: process Proces_Zbiornikow.impl;
+    connections
+      c_in1: port in_sterowanie -> zb_Woda.sterowanie;
+      c_in2: port in_sterowanie -> zb_Piana.sterowanie;
+      c_in3: port in_sterowanie -> zb_Szampon.sterowanie;
+      c_in4: port in_sterowanie -> zb_Nablyszczacz.sterowanie;
+      c_in5: port in_sterowanie -> zb_Powloka.sterowanie;
+      c_in6: port in_sterowanie -> zb_Powietrze.sterowanie;
+      
+      c_z1: port zb_Woda.odplyw -> proc_Zbiornikow.in_woda;
+      c_z2: port zb_Piana.odplyw -> proc_Zbiornikow.in_piana;
+      c_z3: port zb_Szampon.odplyw -> proc_Zbiornikow.in_szampon;
+      c_z4: port zb_Nablyszczacz.odplyw -> proc_Zbiornikow.in_nablyszczacz;
+      c_z5: port zb_Powloka.odplyw -> proc_Zbiornikow.in_powloka;
+      c_z6: port zb_Powietrze.odplyw -> proc_Zbiornikow.in_powietrze;
+      
+      c_out1: port proc_Zbiornikow.out_woda -> out_woda;
+      c_out2: port proc_Zbiornikow.out_piana -> out_piana;
+      c_out3: port proc_Zbiornikow.out_szampon -> out_szampon;
+      c_out4: port proc_Zbiornikow.out_nablyszczacz -> out_nablyszczacz;
+      c_out5: port proc_Zbiornikow.out_powloka -> out_powloka;
+      c_out6: port proc_Zbiornikow.out_powietrze -> out_powietrze;
+
+      bus_zb1: bus access magistrala_3_dostep <-> zb_Woda.dostep_do_magistrali;
+      bus_zb2: bus access magistrala_3_dostep <-> zb_Piana.dostep_do_magistrali;
+      bus_zb3: bus access magistrala_3_dostep <-> zb_Szampon.dostep_do_magistrali;
+      bus_zb4: bus access magistrala_3_dostep <-> zb_Nablyszczacz.dostep_do_magistrali;
+      bus_zb5: bus access magistrala_3_dostep <-> zb_Powloka.dostep_do_magistrali;
+      bus_zb6: bus access magistrala_3_dostep <-> zb_Powietrze.dostep_do_magistrali;
+  end Zespol_Zbiornikow.impl;
+
+  -- --------------------------------------------------------
+  -- PODSYSTEM 4: ZESPÓŁ KOŃCÓWEK
+  -- --------------------------------------------------------
+  device Lanca
+    features
+      wlot: in data port Sygnal;
+  end Lanca;
+
+  device Myjka
+    features
+      wlot: in data port Sygnal;
+  end Myjka;
+
+  device Kompresor
+    features
+      wlot: in data port Sygnal;
+  end Kompresor;
+
+  system Zespol_Koncowek
+    features
+      in_piana: in data port Sygnal;
+      in_cisnienie: in data port Sygnal;
+      in_powietrze: in data port Sygnal;
+  end Zespol_Koncowek;
+
+  system implementation Zespol_Koncowek.impl
+    subcomponents
+      dev_Lanca_Piany: device Lanca;
+      dev_Myjka_Cisnieniowa: device Myjka;
+      dev_Kompresor: device Kompresor;
+    connections
+      c1: port in_piana -> dev_Lanca_Piany.wlot;
+      c2: port in_cisnienie -> dev_Myjka_Cisnieniowa.wlot;
+      c3: port in_powietrze -> dev_Kompresor.wlot;
+  end Zespol_Koncowek.impl;
+
+  -- --------------------------------------------------------
+  -- SYSTEM GŁÓWNY: MYJNIA SAMOCHODOWA
+  -- --------------------------------------------------------
+  system Myjnia_Samochodowa
+  end Myjnia_Samochodowa;
+
+  system implementation Myjnia_Samochodowa.impl
+    subcomponents
+      Panel_Op: system Panel_Operatorski.impl;
+      Panel_Info: system Panel_Informacyjny.impl;
+      Zesp_Zbiornikow: system Zespol_Zbiornikow.impl;
+      Zesp_Koncowek: system Zespol_Koncowek.impl;
+
+      Magistrala_1: bus Magistrala_Danych;
+      Magistrala_2: bus Magistrala_Danych;
+      Magistrala_3: bus Magistrala_Danych;
+      
+      Procesor_1: processor Procesor_Glowny_Monety;
+      Procesor_2: processor Procesor_Glowny_Tryby;
+      Procesor_3: processor Procesor_Rozdzielacz;
+
+    connections
+      -- 1. Panel Operatorski -> Procesory
+      
+      -- a) Monety do Procesora 1
+      c_monety: port Panel_Op.out_Otwor_na_monety -> Procesor_1.in_monety;
+
+      -- b) Przyciski do Procesora 1 (ZMIANA - info dla wyświetlacza)
+      c_info_piana: port Panel_Op.out_Piana_Aktywna -> Procesor_1.in_piana;
+      c_info_szampon: port Panel_Op.out_Mycie_Szamponem -> Procesor_1.in_szampon;
+      c_info_spluk: port Panel_Op.out_Splukiwanie -> Procesor_1.in_splukiwanie;
+      c_info_nabl: port Panel_Op.out_Nablyszczanie -> Procesor_1.in_nablyszczanie;
+      c_info_powl: port Panel_Op.out_Powloka_Ochronna -> Procesor_1.in_powloka;
+      c_info_osus: port Panel_Op.out_Osuszanie -> Procesor_1.in_osuszanie;
+
+      -- c) Przyciski do Procesora 2 (sterowanie zbiornikami)
+      c_tryb1: port Panel_Op.out_Piana_Aktywna -> Procesor_2.in_piana;
+      c_tryb2: port Panel_Op.out_Mycie_Szamponem -> Procesor_2.in_szampon;
+      c_tryb3: port Panel_Op.out_Splukiwanie -> Procesor_2.in_splukiwanie;
+      c_tryb4: port Panel_Op.out_Nablyszczanie -> Procesor_2.in_nablyszczanie;
+      c_tryb5: port Panel_Op.out_Powloka_Ochronna -> Procesor_2.in_powloka;
+      c_tryb6: port Panel_Op.out_Osuszanie -> Procesor_2.in_osuszanie;
+      
+      -- 2. Procesor 1 -> Info
+      c_info_czas: port Procesor_1.out_czas -> Panel_Info.in_czas_mycia;
+      c_info_tryb: port Procesor_1.out_wybrany_tryb -> Panel_Info.in_wybrany_tryb;
+
+      -- 3. Procesor 2 -> Sterowanie zbiornikami
+      c_ster_zbior: port Procesor_2.out_sterowanie_zbiornikami -> Zesp_Zbiornikow.in_sterowanie;
+
+      -- 4. Zbiorniki -> Procesor 3 (Rozdział)
+      c_z_woda: port Zesp_Zbiornikow.out_woda -> Procesor_3.in_woda;
+      c_z_piana: port Zesp_Zbiornikow.out_piana -> Procesor_3.in_piana;
+      c_z_szampon: port Zesp_Zbiornikow.out_szampon -> Procesor_3.in_szampon;
+      c_z_nabl: port Zesp_Zbiornikow.out_nablyszczacz -> Procesor_3.in_nablyszczacz;
+      c_z_powl: port Zesp_Zbiornikow.out_powloka -> Procesor_3.in_powloka;
+      c_z_powietrze: port Zesp_Zbiornikow.out_powietrze -> Procesor_3.in_powietrze;
+
+      -- 5. Procesor 3 -> Końcówki
+      c_konc_piana: port Procesor_3.out_do_lancy -> Zesp_Koncowek.in_piana;
+      c_konc_kompr: port Procesor_3.out_do_kompresora -> Zesp_Koncowek.in_powietrze;
+      c_konc_myjka: port Procesor_3.out_do_myjki -> Zesp_Koncowek.in_cisnienie;
+
+      -- Wiązania magistral
+      b1_acc_panel: bus access Magistrala_1 <-> Panel_Op.magistrala_1_dostep;
+      b2_acc_panel: bus access Magistrala_2 <-> Panel_Op.magistrala_2_dostep;
+      b3_acc_zbior: bus access Magistrala_3 <-> Zesp_Zbiornikow.magistrala_3_dostep;
+      
+      b1_acc_p1: bus access Magistrala_1 <-> Procesor_1.bus_access;
+      b2_acc_p2: bus access Magistrala_2 <-> Procesor_2.bus_access;
+      b3_acc_p3: bus access Magistrala_3 <-> Procesor_3.bus_access;
+
+  end Myjnia_Samochodowa.impl;
+end Myjnia_Package;

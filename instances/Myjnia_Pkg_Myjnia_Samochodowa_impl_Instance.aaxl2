@@ -1,0 +1,1285 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aadl2="http://aadl.info/AADL/2.0" xmlns:instance="http://aadl.info/AADL/2.0/instance">
+  <instance:SystemInstance name="Myjnia_Samochodowa_impl_Instance" category="system">
+    <componentInstance name="Magistrala_1" category="bus">
+      <subcomponent xsi:type="aadl2:BusSubcomponent" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedBusSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:BusType" href="../Myjnia_Pkg.aadl#Myjnia_Package.Magistrala_Danych"/>
+    </componentInstance>
+    <componentInstance name="Magistrala_2" category="bus">
+      <subcomponent xsi:type="aadl2:BusSubcomponent" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedBusSubcomponent.1"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:BusType" href="../Myjnia_Pkg.aadl#Myjnia_Package.Magistrala_Danych"/>
+    </componentInstance>
+    <componentInstance name="Magistrala_3" category="bus">
+      <subcomponent xsi:type="aadl2:BusSubcomponent" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedBusSubcomponent.2"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:BusType" href="../Myjnia_Pkg.aadl#Myjnia_Package.Magistrala_Danych"/>
+    </componentInstance>
+    <componentInstance name="Procesor_1" category="processor">
+      <featureInstance name="in_monety" type="/1">
+        <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.0"/>
+      </featureInstance>
+      <featureInstance name="in_piana" type="/1">
+        <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.1"/>
+      </featureInstance>
+      <featureInstance name="in_szampon" type="/1">
+        <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.2"/>
+      </featureInstance>
+      <featureInstance name="in_splukiwanie" type="/1">
+        <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.3"/>
+      </featureInstance>
+      <featureInstance name="in_nablyszczanie" type="/1">
+        <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.4"/>
+      </featureInstance>
+      <featureInstance name="in_powloka" type="/1">
+        <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.5"/>
+      </featureInstance>
+      <featureInstance name="in_osuszanie" type="/1">
+        <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.6"/>
+      </featureInstance>
+      <featureInstance name="out_czas" direction="out" type="/1">
+        <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.7"/>
+      </featureInstance>
+      <featureInstance name="out_wybrany_tryb" direction="out" type="/1">
+        <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.8"/>
+      </featureInstance>
+      <featureInstance name="bus_access" category="busAccess" type="/2">
+        <feature xsi:type="aadl2:BusAccess" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedBusAccess.0"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ProcessorSubcomponent" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedProcessorSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ProcessorType" href="../Myjnia_Pkg.aadl#Myjnia_Package.Procesor_Glowny_Monety"/>
+    </componentInstance>
+    <componentInstance name="Procesor_2" category="processor">
+      <featureInstance name="in_piana" type="/1">
+        <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedDataPort.0"/>
+      </featureInstance>
+      <featureInstance name="in_szampon" type="/1">
+        <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedDataPort.1"/>
+      </featureInstance>
+      <featureInstance name="in_splukiwanie" type="/1">
+        <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedDataPort.2"/>
+      </featureInstance>
+      <featureInstance name="in_nablyszczanie" type="/1">
+        <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedDataPort.3"/>
+      </featureInstance>
+      <featureInstance name="in_powloka" type="/1">
+        <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedDataPort.4"/>
+      </featureInstance>
+      <featureInstance name="in_osuszanie" type="/1">
+        <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedDataPort.5"/>
+      </featureInstance>
+      <featureInstance name="out_sterowanie_zbiornikami" direction="out" type="/1">
+        <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedDataPort.6"/>
+      </featureInstance>
+      <featureInstance name="bus_access" category="busAccess" type="/2">
+        <feature xsi:type="aadl2:BusAccess" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedBusAccess.0"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ProcessorSubcomponent" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedProcessorSubcomponent.1"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ProcessorType" href="../Myjnia_Pkg.aadl#Myjnia_Package.Procesor_Glowny_Tryby"/>
+    </componentInstance>
+    <componentInstance name="Procesor_3" category="processor">
+      <featureInstance name="in_woda" type="/1">
+        <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.0"/>
+      </featureInstance>
+      <featureInstance name="in_piana" type="/1">
+        <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.1"/>
+      </featureInstance>
+      <featureInstance name="in_szampon" type="/1">
+        <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.2"/>
+      </featureInstance>
+      <featureInstance name="in_nablyszczacz" type="/1">
+        <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.3"/>
+      </featureInstance>
+      <featureInstance name="in_powloka" type="/1">
+        <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.4"/>
+      </featureInstance>
+      <featureInstance name="in_powietrze" type="/1">
+        <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.5"/>
+      </featureInstance>
+      <featureInstance name="out_do_lancy" direction="out" type="/1">
+        <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.6"/>
+      </featureInstance>
+      <featureInstance name="out_do_myjki" direction="out" type="/1">
+        <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.7"/>
+      </featureInstance>
+      <featureInstance name="out_do_kompresora" direction="out" type="/1">
+        <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.8"/>
+      </featureInstance>
+      <featureInstance name="bus_access" category="busAccess" type="/2">
+        <feature xsi:type="aadl2:BusAccess" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedBusAccess.0"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ProcessorSubcomponent" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedProcessorSubcomponent.2"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ProcessorType" href="../Myjnia_Pkg.aadl#Myjnia_Package.Procesor_Rozdzielacz"/>
+    </componentInstance>
+    <componentInstance name="Panel_Op" category="system">
+      <featureInstance name="magistrala_1_dostep" category="busAccess" type="/2">
+        <feature xsi:type="aadl2:BusAccess" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedBusAccess.0"/>
+      </featureInstance>
+      <featureInstance name="magistrala_2_dostep" category="busAccess" type="/2">
+        <feature xsi:type="aadl2:BusAccess" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedBusAccess.1"/>
+      </featureInstance>
+      <featureInstance name="out_Otwor_na_monety" direction="out" type="/1">
+        <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedDataPort.0"/>
+      </featureInstance>
+      <featureInstance name="out_Piana_Aktywna" direction="out" type="/1">
+        <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedDataPort.1"/>
+      </featureInstance>
+      <featureInstance name="out_Mycie_Szamponem" direction="out" type="/1">
+        <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedDataPort.2"/>
+      </featureInstance>
+      <featureInstance name="out_Splukiwanie" direction="out" type="/1">
+        <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedDataPort.3"/>
+      </featureInstance>
+      <featureInstance name="out_Nablyszczanie" direction="out" type="/1">
+        <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedDataPort.4"/>
+      </featureInstance>
+      <featureInstance name="out_Powloka_Ochronna" direction="out" type="/1">
+        <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedDataPort.5"/>
+      </featureInstance>
+      <featureInstance name="out_Osuszanie" direction="out" type="/1">
+        <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedDataPort.6"/>
+      </featureInstance>
+      <componentInstance name="dev_Monety" category="device">
+        <featureInstance name="wyjscie" direction="out" type="/1">
+          <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedDataPort.0"/>
+        </featureInstance>
+        <featureInstance name="dostep_do_magistrali" category="busAccess" type="/2">
+          <feature xsi:type="aadl2:BusAccess" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedBusAccess.0"/>
+        </featureInstance>
+        <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedDeviceSubcomponent.0"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:DeviceType" href="../Myjnia_Pkg.aadl#Myjnia_Package.Otwor_na_monety"/>
+      </componentInstance>
+      <componentInstance name="dev_Piana" category="device">
+        <featureInstance name="wyjscie" direction="out" type="/1">
+          <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.0"/>
+        </featureInstance>
+        <featureInstance name="dostep_do_magistrali" category="busAccess" type="/2">
+          <feature xsi:type="aadl2:BusAccess" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedBusAccess.0"/>
+        </featureInstance>
+        <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedDeviceSubcomponent.1"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:DeviceType" href="../Myjnia_Pkg.aadl#Myjnia_Package.Przycisk"/>
+      </componentInstance>
+      <componentInstance name="dev_Szampon" category="device">
+        <featureInstance name="wyjscie" direction="out" type="/1">
+          <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.0"/>
+        </featureInstance>
+        <featureInstance name="dostep_do_magistrali" category="busAccess" type="/2">
+          <feature xsi:type="aadl2:BusAccess" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedBusAccess.0"/>
+        </featureInstance>
+        <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedDeviceSubcomponent.2"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:DeviceType" href="../Myjnia_Pkg.aadl#Myjnia_Package.Przycisk"/>
+      </componentInstance>
+      <componentInstance name="dev_Splukiwanie" category="device">
+        <featureInstance name="wyjscie" direction="out" type="/1">
+          <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.0"/>
+        </featureInstance>
+        <featureInstance name="dostep_do_magistrali" category="busAccess" type="/2">
+          <feature xsi:type="aadl2:BusAccess" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedBusAccess.0"/>
+        </featureInstance>
+        <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedDeviceSubcomponent.3"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:DeviceType" href="../Myjnia_Pkg.aadl#Myjnia_Package.Przycisk"/>
+      </componentInstance>
+      <componentInstance name="dev_Nablyszczanie" category="device">
+        <featureInstance name="wyjscie" direction="out" type="/1">
+          <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.0"/>
+        </featureInstance>
+        <featureInstance name="dostep_do_magistrali" category="busAccess" type="/2">
+          <feature xsi:type="aadl2:BusAccess" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedBusAccess.0"/>
+        </featureInstance>
+        <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedDeviceSubcomponent.4"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:DeviceType" href="../Myjnia_Pkg.aadl#Myjnia_Package.Przycisk"/>
+      </componentInstance>
+      <componentInstance name="dev_Powloka" category="device">
+        <featureInstance name="wyjscie" direction="out" type="/1">
+          <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.0"/>
+        </featureInstance>
+        <featureInstance name="dostep_do_magistrali" category="busAccess" type="/2">
+          <feature xsi:type="aadl2:BusAccess" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedBusAccess.0"/>
+        </featureInstance>
+        <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedDeviceSubcomponent.5"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:DeviceType" href="../Myjnia_Pkg.aadl#Myjnia_Package.Przycisk"/>
+      </componentInstance>
+      <componentInstance name="dev_Osuszanie" category="device">
+        <featureInstance name="wyjscie" direction="out" type="/1">
+          <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.0"/>
+        </featureInstance>
+        <featureInstance name="dostep_do_magistrali" category="busAccess" type="/2">
+          <feature xsi:type="aadl2:BusAccess" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedBusAccess.0"/>
+        </featureInstance>
+        <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedDeviceSubcomponent.6"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:DeviceType" href="../Myjnia_Pkg.aadl#Myjnia_Package.Przycisk"/>
+      </componentInstance>
+      <componentInstance name="proc_Sterowanie" category="process">
+        <featureInstance name="in_monety" type="/1">
+          <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedDataPort.0"/>
+        </featureInstance>
+        <featureInstance name="in_piana" type="/1">
+          <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedDataPort.1"/>
+        </featureInstance>
+        <featureInstance name="in_szampon" type="/1">
+          <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedDataPort.2"/>
+        </featureInstance>
+        <featureInstance name="in_splukiwanie" type="/1">
+          <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedDataPort.3"/>
+        </featureInstance>
+        <featureInstance name="in_nablyszczanie" type="/1">
+          <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedDataPort.4"/>
+        </featureInstance>
+        <featureInstance name="in_powloka" type="/1">
+          <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedDataPort.5"/>
+        </featureInstance>
+        <featureInstance name="in_osuszanie" type="/1">
+          <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedDataPort.6"/>
+        </featureInstance>
+        <featureInstance name="out_monety" direction="out" type="/1">
+          <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedDataPort.7"/>
+        </featureInstance>
+        <featureInstance name="out_piana" direction="out" type="/1">
+          <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedDataPort.8"/>
+        </featureInstance>
+        <featureInstance name="out_szampon" direction="out" type="/1">
+          <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedDataPort.9"/>
+        </featureInstance>
+        <featureInstance name="out_splukiwanie" direction="out" type="/1">
+          <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedDataPort.10"/>
+        </featureInstance>
+        <featureInstance name="out_nablyszczanie" direction="out" type="/1">
+          <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedDataPort.11"/>
+        </featureInstance>
+        <featureInstance name="out_powloka" direction="out" type="/1">
+          <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedDataPort.12"/>
+        </featureInstance>
+        <featureInstance name="out_osuszanie" direction="out" type="/1">
+          <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedDataPort.13"/>
+        </featureInstance>
+        <componentInstance name="sygnal_Otwor_na_monety" category="thread">
+          <featureInstance name="wejscie" type="/1">
+            <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedDataPort.0"/>
+          </featureInstance>
+          <featureInstance name="wyjscie" direction="out" type="/1">
+            <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedDataPort.1"/>
+          </featureInstance>
+          <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedThreadSubcomponent.0"/>
+          <index>0</index>
+          <classifier xsi:type="aadl2:ThreadType" href="../Myjnia_Pkg.aadl#Myjnia_Package.Watek_Sygnalu"/>
+        </componentInstance>
+        <componentInstance name="sygnal_Piana_Aktywna" category="thread">
+          <featureInstance name="wejscie" type="/1">
+            <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedDataPort.0"/>
+          </featureInstance>
+          <featureInstance name="wyjscie" direction="out" type="/1">
+            <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedDataPort.1"/>
+          </featureInstance>
+          <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedThreadSubcomponent.1"/>
+          <index>0</index>
+          <classifier xsi:type="aadl2:ThreadType" href="../Myjnia_Pkg.aadl#Myjnia_Package.Watek_Sygnalu"/>
+        </componentInstance>
+        <componentInstance name="sygnal_Mycie_Szamponem" category="thread">
+          <featureInstance name="wejscie" type="/1">
+            <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedDataPort.0"/>
+          </featureInstance>
+          <featureInstance name="wyjscie" direction="out" type="/1">
+            <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedDataPort.1"/>
+          </featureInstance>
+          <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedThreadSubcomponent.2"/>
+          <index>0</index>
+          <classifier xsi:type="aadl2:ThreadType" href="../Myjnia_Pkg.aadl#Myjnia_Package.Watek_Sygnalu"/>
+        </componentInstance>
+        <componentInstance name="sygnal_Splukiwanie" category="thread">
+          <featureInstance name="wejscie" type="/1">
+            <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedDataPort.0"/>
+          </featureInstance>
+          <featureInstance name="wyjscie" direction="out" type="/1">
+            <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedDataPort.1"/>
+          </featureInstance>
+          <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedThreadSubcomponent.3"/>
+          <index>0</index>
+          <classifier xsi:type="aadl2:ThreadType" href="../Myjnia_Pkg.aadl#Myjnia_Package.Watek_Sygnalu"/>
+        </componentInstance>
+        <componentInstance name="sygnal_Nablyszczanie" category="thread">
+          <featureInstance name="wejscie" type="/1">
+            <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedDataPort.0"/>
+          </featureInstance>
+          <featureInstance name="wyjscie" direction="out" type="/1">
+            <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedDataPort.1"/>
+          </featureInstance>
+          <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedThreadSubcomponent.4"/>
+          <index>0</index>
+          <classifier xsi:type="aadl2:ThreadType" href="../Myjnia_Pkg.aadl#Myjnia_Package.Watek_Sygnalu"/>
+        </componentInstance>
+        <componentInstance name="sygnal_Powloka_Ochronna" category="thread">
+          <featureInstance name="wejscie" type="/1">
+            <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedDataPort.0"/>
+          </featureInstance>
+          <featureInstance name="wyjscie" direction="out" type="/1">
+            <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedDataPort.1"/>
+          </featureInstance>
+          <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedThreadSubcomponent.5"/>
+          <index>0</index>
+          <classifier xsi:type="aadl2:ThreadType" href="../Myjnia_Pkg.aadl#Myjnia_Package.Watek_Sygnalu"/>
+        </componentInstance>
+        <componentInstance name="sygnal_Osuszanie" category="thread">
+          <featureInstance name="wejscie" type="/1">
+            <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedDataPort.0"/>
+          </featureInstance>
+          <featureInstance name="wyjscie" direction="out" type="/1">
+            <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedDataPort.1"/>
+          </featureInstance>
+          <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedThreadSubcomponent.6"/>
+          <index>0</index>
+          <classifier xsi:type="aadl2:ThreadType" href="../Myjnia_Pkg.aadl#Myjnia_Package.Watek_Sygnalu"/>
+        </componentInstance>
+        <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedProcessSubcomponent.0"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:ProcessImplementation" href="../Myjnia_Pkg.aadl#Myjnia_Package.Proces_Panelu_Operatorskiego.impl"/>
+      </componentInstance>
+      <connectionInstance name="dev_Monety.wyjscie -> proc_Sterowanie.sygnal_Otwor_na_monety.wejscie" complete="true" kind="portConnection" destination="/0/@componentInstance.6/@componentInstance.7/@componentInstance.0/@featureInstance.0" source="/0/@componentInstance.6/@componentInstance.0/@featureInstance.0">
+        <connectionReference context="/0/@componentInstance.6" source="/0/@componentInstance.6/@componentInstance.0/@featureInstance.0" destination="/0/@componentInstance.6/@componentInstance.7/@featureInstance.0">
+          <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedPortConnection.0"/>
+        </connectionReference>
+        <connectionReference context="/0/@componentInstance.6/@componentInstance.7" source="/0/@componentInstance.6/@componentInstance.7/@featureInstance.0" destination="/0/@componentInstance.6/@componentInstance.7/@componentInstance.0/@featureInstance.0">
+          <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedPortConnection.0"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="dev_Piana.wyjscie -> proc_Sterowanie.sygnal_Piana_Aktywna.wejscie" complete="true" kind="portConnection" destination="/0/@componentInstance.6/@componentInstance.7/@componentInstance.1/@featureInstance.0" source="/0/@componentInstance.6/@componentInstance.1/@featureInstance.0">
+        <connectionReference context="/0/@componentInstance.6" source="/0/@componentInstance.6/@componentInstance.1/@featureInstance.0" destination="/0/@componentInstance.6/@componentInstance.7/@featureInstance.1">
+          <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedPortConnection.1"/>
+        </connectionReference>
+        <connectionReference context="/0/@componentInstance.6/@componentInstance.7" source="/0/@componentInstance.6/@componentInstance.7/@featureInstance.1" destination="/0/@componentInstance.6/@componentInstance.7/@componentInstance.1/@featureInstance.0">
+          <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedPortConnection.2"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="dev_Szampon.wyjscie -> proc_Sterowanie.sygnal_Mycie_Szamponem.wejscie" complete="true" kind="portConnection" destination="/0/@componentInstance.6/@componentInstance.7/@componentInstance.2/@featureInstance.0" source="/0/@componentInstance.6/@componentInstance.2/@featureInstance.0">
+        <connectionReference context="/0/@componentInstance.6" source="/0/@componentInstance.6/@componentInstance.2/@featureInstance.0" destination="/0/@componentInstance.6/@componentInstance.7/@featureInstance.2">
+          <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedPortConnection.2"/>
+        </connectionReference>
+        <connectionReference context="/0/@componentInstance.6/@componentInstance.7" source="/0/@componentInstance.6/@componentInstance.7/@featureInstance.2" destination="/0/@componentInstance.6/@componentInstance.7/@componentInstance.2/@featureInstance.0">
+          <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedPortConnection.4"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="dev_Splukiwanie.wyjscie -> proc_Sterowanie.sygnal_Splukiwanie.wejscie" complete="true" kind="portConnection" destination="/0/@componentInstance.6/@componentInstance.7/@componentInstance.3/@featureInstance.0" source="/0/@componentInstance.6/@componentInstance.3/@featureInstance.0">
+        <connectionReference context="/0/@componentInstance.6" source="/0/@componentInstance.6/@componentInstance.3/@featureInstance.0" destination="/0/@componentInstance.6/@componentInstance.7/@featureInstance.3">
+          <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedPortConnection.3"/>
+        </connectionReference>
+        <connectionReference context="/0/@componentInstance.6/@componentInstance.7" source="/0/@componentInstance.6/@componentInstance.7/@featureInstance.3" destination="/0/@componentInstance.6/@componentInstance.7/@componentInstance.3/@featureInstance.0">
+          <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedPortConnection.6"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="dev_Nablyszczanie.wyjscie -> proc_Sterowanie.sygnal_Nablyszczanie.wejscie" complete="true" kind="portConnection" destination="/0/@componentInstance.6/@componentInstance.7/@componentInstance.4/@featureInstance.0" source="/0/@componentInstance.6/@componentInstance.4/@featureInstance.0">
+        <connectionReference context="/0/@componentInstance.6" source="/0/@componentInstance.6/@componentInstance.4/@featureInstance.0" destination="/0/@componentInstance.6/@componentInstance.7/@featureInstance.4">
+          <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedPortConnection.4"/>
+        </connectionReference>
+        <connectionReference context="/0/@componentInstance.6/@componentInstance.7" source="/0/@componentInstance.6/@componentInstance.7/@featureInstance.4" destination="/0/@componentInstance.6/@componentInstance.7/@componentInstance.4/@featureInstance.0">
+          <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedPortConnection.8"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="dev_Powloka.wyjscie -> proc_Sterowanie.sygnal_Powloka_Ochronna.wejscie" complete="true" kind="portConnection" destination="/0/@componentInstance.6/@componentInstance.7/@componentInstance.5/@featureInstance.0" source="/0/@componentInstance.6/@componentInstance.5/@featureInstance.0">
+        <connectionReference context="/0/@componentInstance.6" source="/0/@componentInstance.6/@componentInstance.5/@featureInstance.0" destination="/0/@componentInstance.6/@componentInstance.7/@featureInstance.5">
+          <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedPortConnection.5"/>
+        </connectionReference>
+        <connectionReference context="/0/@componentInstance.6/@componentInstance.7" source="/0/@componentInstance.6/@componentInstance.7/@featureInstance.5" destination="/0/@componentInstance.6/@componentInstance.7/@componentInstance.5/@featureInstance.0">
+          <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedPortConnection.10"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="dev_Osuszanie.wyjscie -> proc_Sterowanie.sygnal_Osuszanie.wejscie" complete="true" kind="portConnection" destination="/0/@componentInstance.6/@componentInstance.7/@componentInstance.6/@featureInstance.0" source="/0/@componentInstance.6/@componentInstance.6/@featureInstance.0">
+        <connectionReference context="/0/@componentInstance.6" source="/0/@componentInstance.6/@componentInstance.6/@featureInstance.0" destination="/0/@componentInstance.6/@componentInstance.7/@featureInstance.6">
+          <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedPortConnection.6"/>
+        </connectionReference>
+        <connectionReference context="/0/@componentInstance.6/@componentInstance.7" source="/0/@componentInstance.6/@componentInstance.7/@featureInstance.6" destination="/0/@componentInstance.6/@componentInstance.7/@componentInstance.6/@featureInstance.0">
+          <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedPortConnection.12"/>
+        </connectionReference>
+      </connectionInstance>
+      <subcomponent xsi:type="aadl2:SystemSubcomponent" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedSystemSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:SystemImplementation" href="../Myjnia_Pkg.aadl#Myjnia_Package.Panel_Operatorski.impl"/>
+    </componentInstance>
+    <componentInstance name="Panel_Info" category="system">
+      <featureInstance name="in_czas_mycia" type="/1">
+        <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.13/@ownedDataPort.0"/>
+      </featureInstance>
+      <featureInstance name="in_wybrany_tryb" type="/1">
+        <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.13/@ownedDataPort.1"/>
+      </featureInstance>
+      <componentInstance name="wysw_Czas" category="device">
+        <featureInstance name="wejscie" type="/1">
+          <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedDataPort.0"/>
+        </featureInstance>
+        <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.14/@ownedDeviceSubcomponent.0"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:DeviceType" href="../Myjnia_Pkg.aadl#Myjnia_Package.Wyswietlacz"/>
+      </componentInstance>
+      <componentInstance name="wysw_Tryb" category="device">
+        <featureInstance name="wejscie" type="/1">
+          <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedDataPort.0"/>
+        </featureInstance>
+        <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.14/@ownedDeviceSubcomponent.1"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:DeviceType" href="../Myjnia_Pkg.aadl#Myjnia_Package.Wyswietlacz"/>
+      </componentInstance>
+      <subcomponent xsi:type="aadl2:SystemSubcomponent" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedSystemSubcomponent.1"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:SystemImplementation" href="../Myjnia_Pkg.aadl#Myjnia_Package.Panel_Informacyjny.impl"/>
+    </componentInstance>
+    <componentInstance name="Zesp_Zbiornikow" category="system">
+      <featureInstance name="magistrala_3_dostep" category="busAccess" type="/2">
+        <feature xsi:type="aadl2:BusAccess" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.18/@ownedBusAccess.0"/>
+      </featureInstance>
+      <featureInstance name="in_sterowanie" type="/1">
+        <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.18/@ownedDataPort.0"/>
+      </featureInstance>
+      <featureInstance name="out_woda" direction="out" type="/1">
+        <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.18/@ownedDataPort.1"/>
+      </featureInstance>
+      <featureInstance name="out_piana" direction="out" type="/1">
+        <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.18/@ownedDataPort.2"/>
+      </featureInstance>
+      <featureInstance name="out_szampon" direction="out" type="/1">
+        <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.18/@ownedDataPort.3"/>
+      </featureInstance>
+      <featureInstance name="out_nablyszczacz" direction="out" type="/1">
+        <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.18/@ownedDataPort.4"/>
+      </featureInstance>
+      <featureInstance name="out_powloka" direction="out" type="/1">
+        <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.18/@ownedDataPort.5"/>
+      </featureInstance>
+      <featureInstance name="out_powietrze" direction="out" type="/1">
+        <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.18/@ownedDataPort.6"/>
+      </featureInstance>
+      <componentInstance name="zb_Woda" category="device">
+        <featureInstance name="sterowanie" type="/1">
+          <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.15/@ownedDataPort.0"/>
+        </featureInstance>
+        <featureInstance name="odplyw" direction="out" type="/1">
+          <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.15/@ownedDataPort.1"/>
+        </featureInstance>
+        <featureInstance name="dostep_do_magistrali" category="busAccess" type="/2">
+          <feature xsi:type="aadl2:BusAccess" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.15/@ownedBusAccess.0"/>
+        </featureInstance>
+        <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.19/@ownedDeviceSubcomponent.0"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:DeviceType" href="../Myjnia_Pkg.aadl#Myjnia_Package.Zbiornik"/>
+      </componentInstance>
+      <componentInstance name="zb_Piana" category="device">
+        <featureInstance name="sterowanie" type="/1">
+          <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.15/@ownedDataPort.0"/>
+        </featureInstance>
+        <featureInstance name="odplyw" direction="out" type="/1">
+          <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.15/@ownedDataPort.1"/>
+        </featureInstance>
+        <featureInstance name="dostep_do_magistrali" category="busAccess" type="/2">
+          <feature xsi:type="aadl2:BusAccess" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.15/@ownedBusAccess.0"/>
+        </featureInstance>
+        <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.19/@ownedDeviceSubcomponent.1"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:DeviceType" href="../Myjnia_Pkg.aadl#Myjnia_Package.Zbiornik"/>
+      </componentInstance>
+      <componentInstance name="zb_Szampon" category="device">
+        <featureInstance name="sterowanie" type="/1">
+          <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.15/@ownedDataPort.0"/>
+        </featureInstance>
+        <featureInstance name="odplyw" direction="out" type="/1">
+          <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.15/@ownedDataPort.1"/>
+        </featureInstance>
+        <featureInstance name="dostep_do_magistrali" category="busAccess" type="/2">
+          <feature xsi:type="aadl2:BusAccess" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.15/@ownedBusAccess.0"/>
+        </featureInstance>
+        <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.19/@ownedDeviceSubcomponent.2"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:DeviceType" href="../Myjnia_Pkg.aadl#Myjnia_Package.Zbiornik"/>
+      </componentInstance>
+      <componentInstance name="zb_Nablyszczacz" category="device">
+        <featureInstance name="sterowanie" type="/1">
+          <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.15/@ownedDataPort.0"/>
+        </featureInstance>
+        <featureInstance name="odplyw" direction="out" type="/1">
+          <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.15/@ownedDataPort.1"/>
+        </featureInstance>
+        <featureInstance name="dostep_do_magistrali" category="busAccess" type="/2">
+          <feature xsi:type="aadl2:BusAccess" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.15/@ownedBusAccess.0"/>
+        </featureInstance>
+        <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.19/@ownedDeviceSubcomponent.3"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:DeviceType" href="../Myjnia_Pkg.aadl#Myjnia_Package.Zbiornik"/>
+      </componentInstance>
+      <componentInstance name="zb_Powloka" category="device">
+        <featureInstance name="sterowanie" type="/1">
+          <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.15/@ownedDataPort.0"/>
+        </featureInstance>
+        <featureInstance name="odplyw" direction="out" type="/1">
+          <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.15/@ownedDataPort.1"/>
+        </featureInstance>
+        <featureInstance name="dostep_do_magistrali" category="busAccess" type="/2">
+          <feature xsi:type="aadl2:BusAccess" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.15/@ownedBusAccess.0"/>
+        </featureInstance>
+        <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.19/@ownedDeviceSubcomponent.4"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:DeviceType" href="../Myjnia_Pkg.aadl#Myjnia_Package.Zbiornik"/>
+      </componentInstance>
+      <componentInstance name="zb_Powietrze" category="device">
+        <featureInstance name="sterowanie" type="/1">
+          <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.15/@ownedDataPort.0"/>
+        </featureInstance>
+        <featureInstance name="odplyw" direction="out" type="/1">
+          <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.15/@ownedDataPort.1"/>
+        </featureInstance>
+        <featureInstance name="dostep_do_magistrali" category="busAccess" type="/2">
+          <feature xsi:type="aadl2:BusAccess" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.15/@ownedBusAccess.0"/>
+        </featureInstance>
+        <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.19/@ownedDeviceSubcomponent.5"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:DeviceType" href="../Myjnia_Pkg.aadl#Myjnia_Package.Zbiornik"/>
+      </componentInstance>
+      <componentInstance name="proc_Zbiornikow" category="process">
+        <featureInstance name="in_woda" type="/1">
+          <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.16/@ownedDataPort.0"/>
+        </featureInstance>
+        <featureInstance name="in_piana" type="/1">
+          <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.16/@ownedDataPort.1"/>
+        </featureInstance>
+        <featureInstance name="in_szampon" type="/1">
+          <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.16/@ownedDataPort.2"/>
+        </featureInstance>
+        <featureInstance name="in_nablyszczacz" type="/1">
+          <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.16/@ownedDataPort.3"/>
+        </featureInstance>
+        <featureInstance name="in_powloka" type="/1">
+          <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.16/@ownedDataPort.4"/>
+        </featureInstance>
+        <featureInstance name="in_powietrze" type="/1">
+          <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.16/@ownedDataPort.5"/>
+        </featureInstance>
+        <featureInstance name="out_woda" direction="out" type="/1">
+          <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.16/@ownedDataPort.6"/>
+        </featureInstance>
+        <featureInstance name="out_piana" direction="out" type="/1">
+          <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.16/@ownedDataPort.7"/>
+        </featureInstance>
+        <featureInstance name="out_szampon" direction="out" type="/1">
+          <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.16/@ownedDataPort.8"/>
+        </featureInstance>
+        <featureInstance name="out_nablyszczacz" direction="out" type="/1">
+          <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.16/@ownedDataPort.9"/>
+        </featureInstance>
+        <featureInstance name="out_powloka" direction="out" type="/1">
+          <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.16/@ownedDataPort.10"/>
+        </featureInstance>
+        <featureInstance name="out_powietrze" direction="out" type="/1">
+          <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.16/@ownedDataPort.11"/>
+        </featureInstance>
+        <componentInstance name="sygnal_Zbiornik_Woda" category="thread">
+          <featureInstance name="wejscie" type="/1">
+            <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedDataPort.0"/>
+          </featureInstance>
+          <featureInstance name="wyjscie" direction="out" type="/1">
+            <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedDataPort.1"/>
+          </featureInstance>
+          <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.17/@ownedThreadSubcomponent.0"/>
+          <index>0</index>
+          <classifier xsi:type="aadl2:ThreadType" href="../Myjnia_Pkg.aadl#Myjnia_Package.Watek_Sygnalu"/>
+        </componentInstance>
+        <componentInstance name="sygnal_Zbiornik_Piana" category="thread">
+          <featureInstance name="wejscie" type="/1">
+            <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedDataPort.0"/>
+          </featureInstance>
+          <featureInstance name="wyjscie" direction="out" type="/1">
+            <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedDataPort.1"/>
+          </featureInstance>
+          <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.17/@ownedThreadSubcomponent.1"/>
+          <index>0</index>
+          <classifier xsi:type="aadl2:ThreadType" href="../Myjnia_Pkg.aadl#Myjnia_Package.Watek_Sygnalu"/>
+        </componentInstance>
+        <componentInstance name="sygnal_Zbiornik_Szampon" category="thread">
+          <featureInstance name="wejscie" type="/1">
+            <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedDataPort.0"/>
+          </featureInstance>
+          <featureInstance name="wyjscie" direction="out" type="/1">
+            <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedDataPort.1"/>
+          </featureInstance>
+          <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.17/@ownedThreadSubcomponent.2"/>
+          <index>0</index>
+          <classifier xsi:type="aadl2:ThreadType" href="../Myjnia_Pkg.aadl#Myjnia_Package.Watek_Sygnalu"/>
+        </componentInstance>
+        <componentInstance name="sygnal_Zbiornik_Nablyszczacz" category="thread">
+          <featureInstance name="wejscie" type="/1">
+            <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedDataPort.0"/>
+          </featureInstance>
+          <featureInstance name="wyjscie" direction="out" type="/1">
+            <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedDataPort.1"/>
+          </featureInstance>
+          <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.17/@ownedThreadSubcomponent.3"/>
+          <index>0</index>
+          <classifier xsi:type="aadl2:ThreadType" href="../Myjnia_Pkg.aadl#Myjnia_Package.Watek_Sygnalu"/>
+        </componentInstance>
+        <componentInstance name="sygnal_Zbiornik_Powloka" category="thread">
+          <featureInstance name="wejscie" type="/1">
+            <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedDataPort.0"/>
+          </featureInstance>
+          <featureInstance name="wyjscie" direction="out" type="/1">
+            <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedDataPort.1"/>
+          </featureInstance>
+          <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.17/@ownedThreadSubcomponent.4"/>
+          <index>0</index>
+          <classifier xsi:type="aadl2:ThreadType" href="../Myjnia_Pkg.aadl#Myjnia_Package.Watek_Sygnalu"/>
+        </componentInstance>
+        <componentInstance name="sygnal_Zbiornik_Powietrze" category="thread">
+          <featureInstance name="wejscie" type="/1">
+            <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedDataPort.0"/>
+          </featureInstance>
+          <featureInstance name="wyjscie" direction="out" type="/1">
+            <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedDataPort.1"/>
+          </featureInstance>
+          <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.17/@ownedThreadSubcomponent.5"/>
+          <index>0</index>
+          <classifier xsi:type="aadl2:ThreadType" href="../Myjnia_Pkg.aadl#Myjnia_Package.Watek_Sygnalu"/>
+        </componentInstance>
+        <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.19/@ownedProcessSubcomponent.0"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:ProcessImplementation" href="../Myjnia_Pkg.aadl#Myjnia_Package.Proces_Zbiornikow.impl"/>
+      </componentInstance>
+      <connectionInstance name="zb_Woda.odplyw -> proc_Zbiornikow.sygnal_Zbiornik_Woda.wejscie" complete="true" kind="portConnection" destination="/0/@componentInstance.8/@componentInstance.6/@componentInstance.0/@featureInstance.0" source="/0/@componentInstance.8/@componentInstance.0/@featureInstance.1">
+        <connectionReference context="/0/@componentInstance.8" source="/0/@componentInstance.8/@componentInstance.0/@featureInstance.1" destination="/0/@componentInstance.8/@componentInstance.6/@featureInstance.0">
+          <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.19/@ownedPortConnection.6"/>
+        </connectionReference>
+        <connectionReference context="/0/@componentInstance.8/@componentInstance.6" source="/0/@componentInstance.8/@componentInstance.6/@featureInstance.0" destination="/0/@componentInstance.8/@componentInstance.6/@componentInstance.0/@featureInstance.0">
+          <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.17/@ownedPortConnection.0"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="zb_Piana.odplyw -> proc_Zbiornikow.sygnal_Zbiornik_Piana.wejscie" complete="true" kind="portConnection" destination="/0/@componentInstance.8/@componentInstance.6/@componentInstance.1/@featureInstance.0" source="/0/@componentInstance.8/@componentInstance.1/@featureInstance.1">
+        <connectionReference context="/0/@componentInstance.8" source="/0/@componentInstance.8/@componentInstance.1/@featureInstance.1" destination="/0/@componentInstance.8/@componentInstance.6/@featureInstance.1">
+          <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.19/@ownedPortConnection.7"/>
+        </connectionReference>
+        <connectionReference context="/0/@componentInstance.8/@componentInstance.6" source="/0/@componentInstance.8/@componentInstance.6/@featureInstance.1" destination="/0/@componentInstance.8/@componentInstance.6/@componentInstance.1/@featureInstance.0">
+          <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.17/@ownedPortConnection.1"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="zb_Szampon.odplyw -> proc_Zbiornikow.sygnal_Zbiornik_Szampon.wejscie" complete="true" kind="portConnection" destination="/0/@componentInstance.8/@componentInstance.6/@componentInstance.2/@featureInstance.0" source="/0/@componentInstance.8/@componentInstance.2/@featureInstance.1">
+        <connectionReference context="/0/@componentInstance.8" source="/0/@componentInstance.8/@componentInstance.2/@featureInstance.1" destination="/0/@componentInstance.8/@componentInstance.6/@featureInstance.2">
+          <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.19/@ownedPortConnection.8"/>
+        </connectionReference>
+        <connectionReference context="/0/@componentInstance.8/@componentInstance.6" source="/0/@componentInstance.8/@componentInstance.6/@featureInstance.2" destination="/0/@componentInstance.8/@componentInstance.6/@componentInstance.2/@featureInstance.0">
+          <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.17/@ownedPortConnection.2"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="zb_Nablyszczacz.odplyw -> proc_Zbiornikow.sygnal_Zbiornik_Nablyszczacz.wejscie" complete="true" kind="portConnection" destination="/0/@componentInstance.8/@componentInstance.6/@componentInstance.3/@featureInstance.0" source="/0/@componentInstance.8/@componentInstance.3/@featureInstance.1">
+        <connectionReference context="/0/@componentInstance.8" source="/0/@componentInstance.8/@componentInstance.3/@featureInstance.1" destination="/0/@componentInstance.8/@componentInstance.6/@featureInstance.3">
+          <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.19/@ownedPortConnection.9"/>
+        </connectionReference>
+        <connectionReference context="/0/@componentInstance.8/@componentInstance.6" source="/0/@componentInstance.8/@componentInstance.6/@featureInstance.3" destination="/0/@componentInstance.8/@componentInstance.6/@componentInstance.3/@featureInstance.0">
+          <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.17/@ownedPortConnection.3"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="zb_Powloka.odplyw -> proc_Zbiornikow.sygnal_Zbiornik_Powloka.wejscie" complete="true" kind="portConnection" destination="/0/@componentInstance.8/@componentInstance.6/@componentInstance.4/@featureInstance.0" source="/0/@componentInstance.8/@componentInstance.4/@featureInstance.1">
+        <connectionReference context="/0/@componentInstance.8" source="/0/@componentInstance.8/@componentInstance.4/@featureInstance.1" destination="/0/@componentInstance.8/@componentInstance.6/@featureInstance.4">
+          <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.19/@ownedPortConnection.10"/>
+        </connectionReference>
+        <connectionReference context="/0/@componentInstance.8/@componentInstance.6" source="/0/@componentInstance.8/@componentInstance.6/@featureInstance.4" destination="/0/@componentInstance.8/@componentInstance.6/@componentInstance.4/@featureInstance.0">
+          <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.17/@ownedPortConnection.4"/>
+        </connectionReference>
+      </connectionInstance>
+      <connectionInstance name="zb_Powietrze.odplyw -> proc_Zbiornikow.sygnal_Zbiornik_Powietrze.wejscie" complete="true" kind="portConnection" destination="/0/@componentInstance.8/@componentInstance.6/@componentInstance.5/@featureInstance.0" source="/0/@componentInstance.8/@componentInstance.5/@featureInstance.1">
+        <connectionReference context="/0/@componentInstance.8" source="/0/@componentInstance.8/@componentInstance.5/@featureInstance.1" destination="/0/@componentInstance.8/@componentInstance.6/@featureInstance.5">
+          <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.19/@ownedPortConnection.11"/>
+        </connectionReference>
+        <connectionReference context="/0/@componentInstance.8/@componentInstance.6" source="/0/@componentInstance.8/@componentInstance.6/@featureInstance.5" destination="/0/@componentInstance.8/@componentInstance.6/@componentInstance.5/@featureInstance.0">
+          <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.17/@ownedPortConnection.5"/>
+        </connectionReference>
+      </connectionInstance>
+      <subcomponent xsi:type="aadl2:SystemSubcomponent" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedSystemSubcomponent.2"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:SystemImplementation" href="../Myjnia_Pkg.aadl#Myjnia_Package.Zespol_Zbiornikow.impl"/>
+    </componentInstance>
+    <componentInstance name="Zesp_Koncowek" category="system">
+      <featureInstance name="in_piana" type="/1">
+        <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.23/@ownedDataPort.0"/>
+      </featureInstance>
+      <featureInstance name="in_cisnienie" type="/1">
+        <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.23/@ownedDataPort.1"/>
+      </featureInstance>
+      <featureInstance name="in_powietrze" type="/1">
+        <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.23/@ownedDataPort.2"/>
+      </featureInstance>
+      <componentInstance name="dev_Lanca_Piany" category="device">
+        <featureInstance name="wlot" type="/1">
+          <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.20/@ownedDataPort.0"/>
+        </featureInstance>
+        <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.24/@ownedDeviceSubcomponent.0"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:DeviceType" href="../Myjnia_Pkg.aadl#Myjnia_Package.Lanca"/>
+      </componentInstance>
+      <componentInstance name="dev_Myjka_Cisnieniowa" category="device">
+        <featureInstance name="wlot" type="/1">
+          <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.21/@ownedDataPort.0"/>
+        </featureInstance>
+        <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.24/@ownedDeviceSubcomponent.1"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:DeviceType" href="../Myjnia_Pkg.aadl#Myjnia_Package.Myjka"/>
+      </componentInstance>
+      <componentInstance name="dev_Kompresor" category="device">
+        <featureInstance name="wlot" type="/1">
+          <feature xsi:type="aadl2:DataPort" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.22/@ownedDataPort.0"/>
+        </featureInstance>
+        <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.24/@ownedDeviceSubcomponent.2"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:DeviceType" href="../Myjnia_Pkg.aadl#Myjnia_Package.Kompresor"/>
+      </componentInstance>
+      <subcomponent xsi:type="aadl2:SystemSubcomponent" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedSystemSubcomponent.3"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:SystemImplementation" href="../Myjnia_Pkg.aadl#Myjnia_Package.Zespol_Koncowek.impl"/>
+    </componentInstance>
+    <connectionInstance name="Magistrala_1 -> Panel_Op.dev_Monety.dostep_do_magistrali" complete="true" kind="accessConnection" destination="/0/@componentInstance.6/@componentInstance.0/@featureInstance.1" source="/0/@componentInstance.0">
+      <connectionReference context="/0" source="/0/@componentInstance.0" destination="/0/@componentInstance.6/@featureInstance.0">
+        <connection xsi:type="aadl2:AccessConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedAccessConnection.0"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.6" source="/0/@componentInstance.6/@featureInstance.0" destination="/0/@componentInstance.6/@componentInstance.0/@featureInstance.1">
+        <connection xsi:type="aadl2:AccessConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedAccessConnection.0"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="Magistrala_1 -> Procesor_1.bus_access" complete="true" kind="accessConnection" destination="/0/@componentInstance.3/@featureInstance.9" source="/0/@componentInstance.0">
+      <connectionReference context="/0" source="/0/@componentInstance.0" destination="/0/@componentInstance.3/@featureInstance.9">
+        <connection xsi:type="aadl2:AccessConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedAccessConnection.3"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="Magistrala_2 -> Panel_Op.dev_Piana.dostep_do_magistrali" complete="true" kind="accessConnection" destination="/0/@componentInstance.6/@componentInstance.1/@featureInstance.1" source="/0/@componentInstance.1">
+      <connectionReference context="/0" source="/0/@componentInstance.1" destination="/0/@componentInstance.6/@featureInstance.1">
+        <connection xsi:type="aadl2:AccessConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedAccessConnection.1"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.6" source="/0/@componentInstance.6/@featureInstance.1" destination="/0/@componentInstance.6/@componentInstance.1/@featureInstance.1">
+        <connection xsi:type="aadl2:AccessConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedAccessConnection.1"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="Magistrala_2 -> Panel_Op.dev_Szampon.dostep_do_magistrali" complete="true" kind="accessConnection" destination="/0/@componentInstance.6/@componentInstance.2/@featureInstance.1" source="/0/@componentInstance.1">
+      <connectionReference context="/0" source="/0/@componentInstance.1" destination="/0/@componentInstance.6/@featureInstance.1">
+        <connection xsi:type="aadl2:AccessConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedAccessConnection.1"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.6" source="/0/@componentInstance.6/@featureInstance.1" destination="/0/@componentInstance.6/@componentInstance.2/@featureInstance.1">
+        <connection xsi:type="aadl2:AccessConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedAccessConnection.2"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="Magistrala_2 -> Panel_Op.dev_Splukiwanie.dostep_do_magistrali" complete="true" kind="accessConnection" destination="/0/@componentInstance.6/@componentInstance.3/@featureInstance.1" source="/0/@componentInstance.1">
+      <connectionReference context="/0" source="/0/@componentInstance.1" destination="/0/@componentInstance.6/@featureInstance.1">
+        <connection xsi:type="aadl2:AccessConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedAccessConnection.1"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.6" source="/0/@componentInstance.6/@featureInstance.1" destination="/0/@componentInstance.6/@componentInstance.3/@featureInstance.1">
+        <connection xsi:type="aadl2:AccessConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedAccessConnection.3"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="Magistrala_2 -> Panel_Op.dev_Nablyszczanie.dostep_do_magistrali" complete="true" kind="accessConnection" destination="/0/@componentInstance.6/@componentInstance.4/@featureInstance.1" source="/0/@componentInstance.1">
+      <connectionReference context="/0" source="/0/@componentInstance.1" destination="/0/@componentInstance.6/@featureInstance.1">
+        <connection xsi:type="aadl2:AccessConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedAccessConnection.1"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.6" source="/0/@componentInstance.6/@featureInstance.1" destination="/0/@componentInstance.6/@componentInstance.4/@featureInstance.1">
+        <connection xsi:type="aadl2:AccessConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedAccessConnection.4"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="Magistrala_2 -> Panel_Op.dev_Powloka.dostep_do_magistrali" complete="true" kind="accessConnection" destination="/0/@componentInstance.6/@componentInstance.5/@featureInstance.1" source="/0/@componentInstance.1">
+      <connectionReference context="/0" source="/0/@componentInstance.1" destination="/0/@componentInstance.6/@featureInstance.1">
+        <connection xsi:type="aadl2:AccessConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedAccessConnection.1"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.6" source="/0/@componentInstance.6/@featureInstance.1" destination="/0/@componentInstance.6/@componentInstance.5/@featureInstance.1">
+        <connection xsi:type="aadl2:AccessConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedAccessConnection.5"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="Magistrala_2 -> Panel_Op.dev_Osuszanie.dostep_do_magistrali" complete="true" kind="accessConnection" destination="/0/@componentInstance.6/@componentInstance.6/@featureInstance.1" source="/0/@componentInstance.1">
+      <connectionReference context="/0" source="/0/@componentInstance.1" destination="/0/@componentInstance.6/@featureInstance.1">
+        <connection xsi:type="aadl2:AccessConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedAccessConnection.1"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.6" source="/0/@componentInstance.6/@featureInstance.1" destination="/0/@componentInstance.6/@componentInstance.6/@featureInstance.1">
+        <connection xsi:type="aadl2:AccessConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedAccessConnection.6"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="Magistrala_2 -> Procesor_2.bus_access" complete="true" kind="accessConnection" destination="/0/@componentInstance.4/@featureInstance.7" source="/0/@componentInstance.1">
+      <connectionReference context="/0" source="/0/@componentInstance.1" destination="/0/@componentInstance.4/@featureInstance.7">
+        <connection xsi:type="aadl2:AccessConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedAccessConnection.4"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="Magistrala_3 -> Zesp_Zbiornikow.zb_Woda.dostep_do_magistrali" complete="true" kind="accessConnection" destination="/0/@componentInstance.8/@componentInstance.0/@featureInstance.2" source="/0/@componentInstance.2">
+      <connectionReference context="/0" source="/0/@componentInstance.2" destination="/0/@componentInstance.8/@featureInstance.0">
+        <connection xsi:type="aadl2:AccessConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedAccessConnection.2"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.8" source="/0/@componentInstance.8/@featureInstance.0" destination="/0/@componentInstance.8/@componentInstance.0/@featureInstance.2">
+        <connection xsi:type="aadl2:AccessConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.19/@ownedAccessConnection.0"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="Magistrala_3 -> Zesp_Zbiornikow.zb_Piana.dostep_do_magistrali" complete="true" kind="accessConnection" destination="/0/@componentInstance.8/@componentInstance.1/@featureInstance.2" source="/0/@componentInstance.2">
+      <connectionReference context="/0" source="/0/@componentInstance.2" destination="/0/@componentInstance.8/@featureInstance.0">
+        <connection xsi:type="aadl2:AccessConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedAccessConnection.2"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.8" source="/0/@componentInstance.8/@featureInstance.0" destination="/0/@componentInstance.8/@componentInstance.1/@featureInstance.2">
+        <connection xsi:type="aadl2:AccessConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.19/@ownedAccessConnection.1"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="Magistrala_3 -> Zesp_Zbiornikow.zb_Szampon.dostep_do_magistrali" complete="true" kind="accessConnection" destination="/0/@componentInstance.8/@componentInstance.2/@featureInstance.2" source="/0/@componentInstance.2">
+      <connectionReference context="/0" source="/0/@componentInstance.2" destination="/0/@componentInstance.8/@featureInstance.0">
+        <connection xsi:type="aadl2:AccessConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedAccessConnection.2"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.8" source="/0/@componentInstance.8/@featureInstance.0" destination="/0/@componentInstance.8/@componentInstance.2/@featureInstance.2">
+        <connection xsi:type="aadl2:AccessConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.19/@ownedAccessConnection.2"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="Magistrala_3 -> Zesp_Zbiornikow.zb_Nablyszczacz.dostep_do_magistrali" complete="true" kind="accessConnection" destination="/0/@componentInstance.8/@componentInstance.3/@featureInstance.2" source="/0/@componentInstance.2">
+      <connectionReference context="/0" source="/0/@componentInstance.2" destination="/0/@componentInstance.8/@featureInstance.0">
+        <connection xsi:type="aadl2:AccessConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedAccessConnection.2"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.8" source="/0/@componentInstance.8/@featureInstance.0" destination="/0/@componentInstance.8/@componentInstance.3/@featureInstance.2">
+        <connection xsi:type="aadl2:AccessConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.19/@ownedAccessConnection.3"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="Magistrala_3 -> Zesp_Zbiornikow.zb_Powloka.dostep_do_magistrali" complete="true" kind="accessConnection" destination="/0/@componentInstance.8/@componentInstance.4/@featureInstance.2" source="/0/@componentInstance.2">
+      <connectionReference context="/0" source="/0/@componentInstance.2" destination="/0/@componentInstance.8/@featureInstance.0">
+        <connection xsi:type="aadl2:AccessConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedAccessConnection.2"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.8" source="/0/@componentInstance.8/@featureInstance.0" destination="/0/@componentInstance.8/@componentInstance.4/@featureInstance.2">
+        <connection xsi:type="aadl2:AccessConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.19/@ownedAccessConnection.4"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="Magistrala_3 -> Zesp_Zbiornikow.zb_Powietrze.dostep_do_magistrali" complete="true" kind="accessConnection" destination="/0/@componentInstance.8/@componentInstance.5/@featureInstance.2" source="/0/@componentInstance.2">
+      <connectionReference context="/0" source="/0/@componentInstance.2" destination="/0/@componentInstance.8/@featureInstance.0">
+        <connection xsi:type="aadl2:AccessConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedAccessConnection.2"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.8" source="/0/@componentInstance.8/@featureInstance.0" destination="/0/@componentInstance.8/@componentInstance.5/@featureInstance.2">
+        <connection xsi:type="aadl2:AccessConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.19/@ownedAccessConnection.5"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="Magistrala_3 -> Procesor_3.bus_access" complete="true" kind="accessConnection" destination="/0/@componentInstance.5/@featureInstance.9" source="/0/@componentInstance.2">
+      <connectionReference context="/0" source="/0/@componentInstance.2" destination="/0/@componentInstance.5/@featureInstance.9">
+        <connection xsi:type="aadl2:AccessConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedAccessConnection.5"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="Procesor_1.out_czas -> Panel_Info.wysw_Czas.wejscie" complete="true" kind="portConnection" destination="/0/@componentInstance.7/@componentInstance.0/@featureInstance.0" source="/0/@componentInstance.3/@featureInstance.7">
+      <connectionReference context="/0" source="/0/@componentInstance.3/@featureInstance.7" destination="/0/@componentInstance.7/@featureInstance.0">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedPortConnection.13"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.7" source="/0/@componentInstance.7/@featureInstance.0" destination="/0/@componentInstance.7/@componentInstance.0/@featureInstance.0">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.14/@ownedPortConnection.0"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="Procesor_1.out_wybrany_tryb -> Panel_Info.wysw_Tryb.wejscie" complete="true" kind="portConnection" destination="/0/@componentInstance.7/@componentInstance.1/@featureInstance.0" source="/0/@componentInstance.3/@featureInstance.8">
+      <connectionReference context="/0" source="/0/@componentInstance.3/@featureInstance.8" destination="/0/@componentInstance.7/@featureInstance.1">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedPortConnection.14"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.7" source="/0/@componentInstance.7/@featureInstance.1" destination="/0/@componentInstance.7/@componentInstance.1/@featureInstance.0">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.14/@ownedPortConnection.1"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="Procesor_1.bus_access -> Magistrala_1" complete="true" kind="accessConnection" destination="/0/@componentInstance.0" source="/0/@componentInstance.3/@featureInstance.9">
+      <connectionReference context="/0" source="/0/@componentInstance.3/@featureInstance.9" destination="/0/@componentInstance.0" reverse="true">
+        <connection xsi:type="aadl2:AccessConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedAccessConnection.3"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="Procesor_2.out_sterowanie_zbiornikami -> Zesp_Zbiornikow.zb_Woda.sterowanie" complete="true" kind="portConnection" destination="/0/@componentInstance.8/@componentInstance.0/@featureInstance.0" source="/0/@componentInstance.4/@featureInstance.6">
+      <connectionReference context="/0" source="/0/@componentInstance.4/@featureInstance.6" destination="/0/@componentInstance.8/@featureInstance.1">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedPortConnection.15"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.8" source="/0/@componentInstance.8/@featureInstance.1" destination="/0/@componentInstance.8/@componentInstance.0/@featureInstance.0">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.19/@ownedPortConnection.0"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="Procesor_2.out_sterowanie_zbiornikami -> Zesp_Zbiornikow.zb_Piana.sterowanie" complete="true" kind="portConnection" destination="/0/@componentInstance.8/@componentInstance.1/@featureInstance.0" source="/0/@componentInstance.4/@featureInstance.6">
+      <connectionReference context="/0" source="/0/@componentInstance.4/@featureInstance.6" destination="/0/@componentInstance.8/@featureInstance.1">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedPortConnection.15"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.8" source="/0/@componentInstance.8/@featureInstance.1" destination="/0/@componentInstance.8/@componentInstance.1/@featureInstance.0">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.19/@ownedPortConnection.1"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="Procesor_2.out_sterowanie_zbiornikami -> Zesp_Zbiornikow.zb_Szampon.sterowanie" complete="true" kind="portConnection" destination="/0/@componentInstance.8/@componentInstance.2/@featureInstance.0" source="/0/@componentInstance.4/@featureInstance.6">
+      <connectionReference context="/0" source="/0/@componentInstance.4/@featureInstance.6" destination="/0/@componentInstance.8/@featureInstance.1">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedPortConnection.15"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.8" source="/0/@componentInstance.8/@featureInstance.1" destination="/0/@componentInstance.8/@componentInstance.2/@featureInstance.0">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.19/@ownedPortConnection.2"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="Procesor_2.out_sterowanie_zbiornikami -> Zesp_Zbiornikow.zb_Nablyszczacz.sterowanie" complete="true" kind="portConnection" destination="/0/@componentInstance.8/@componentInstance.3/@featureInstance.0" source="/0/@componentInstance.4/@featureInstance.6">
+      <connectionReference context="/0" source="/0/@componentInstance.4/@featureInstance.6" destination="/0/@componentInstance.8/@featureInstance.1">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedPortConnection.15"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.8" source="/0/@componentInstance.8/@featureInstance.1" destination="/0/@componentInstance.8/@componentInstance.3/@featureInstance.0">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.19/@ownedPortConnection.3"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="Procesor_2.out_sterowanie_zbiornikami -> Zesp_Zbiornikow.zb_Powloka.sterowanie" complete="true" kind="portConnection" destination="/0/@componentInstance.8/@componentInstance.4/@featureInstance.0" source="/0/@componentInstance.4/@featureInstance.6">
+      <connectionReference context="/0" source="/0/@componentInstance.4/@featureInstance.6" destination="/0/@componentInstance.8/@featureInstance.1">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedPortConnection.15"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.8" source="/0/@componentInstance.8/@featureInstance.1" destination="/0/@componentInstance.8/@componentInstance.4/@featureInstance.0">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.19/@ownedPortConnection.4"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="Procesor_2.out_sterowanie_zbiornikami -> Zesp_Zbiornikow.zb_Powietrze.sterowanie" complete="true" kind="portConnection" destination="/0/@componentInstance.8/@componentInstance.5/@featureInstance.0" source="/0/@componentInstance.4/@featureInstance.6">
+      <connectionReference context="/0" source="/0/@componentInstance.4/@featureInstance.6" destination="/0/@componentInstance.8/@featureInstance.1">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedPortConnection.15"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.8" source="/0/@componentInstance.8/@featureInstance.1" destination="/0/@componentInstance.8/@componentInstance.5/@featureInstance.0">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.19/@ownedPortConnection.5"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="Procesor_2.bus_access -> Magistrala_2" complete="true" kind="accessConnection" destination="/0/@componentInstance.1" source="/0/@componentInstance.4/@featureInstance.7">
+      <connectionReference context="/0" source="/0/@componentInstance.4/@featureInstance.7" destination="/0/@componentInstance.1" reverse="true">
+        <connection xsi:type="aadl2:AccessConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedAccessConnection.4"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="Procesor_3.out_do_lancy -> Zesp_Koncowek.dev_Lanca_Piany.wlot" complete="true" kind="portConnection" destination="/0/@componentInstance.9/@componentInstance.0/@featureInstance.0" source="/0/@componentInstance.5/@featureInstance.6">
+      <connectionReference context="/0" source="/0/@componentInstance.5/@featureInstance.6" destination="/0/@componentInstance.9/@featureInstance.0">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedPortConnection.22"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.9" source="/0/@componentInstance.9/@featureInstance.0" destination="/0/@componentInstance.9/@componentInstance.0/@featureInstance.0">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.24/@ownedPortConnection.0"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="Procesor_3.out_do_myjki -> Zesp_Koncowek.dev_Myjka_Cisnieniowa.wlot" complete="true" kind="portConnection" destination="/0/@componentInstance.9/@componentInstance.1/@featureInstance.0" source="/0/@componentInstance.5/@featureInstance.7">
+      <connectionReference context="/0" source="/0/@componentInstance.5/@featureInstance.7" destination="/0/@componentInstance.9/@featureInstance.1">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedPortConnection.24"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.9" source="/0/@componentInstance.9/@featureInstance.1" destination="/0/@componentInstance.9/@componentInstance.1/@featureInstance.0">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.24/@ownedPortConnection.1"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="Procesor_3.out_do_kompresora -> Zesp_Koncowek.dev_Kompresor.wlot" complete="true" kind="portConnection" destination="/0/@componentInstance.9/@componentInstance.2/@featureInstance.0" source="/0/@componentInstance.5/@featureInstance.8">
+      <connectionReference context="/0" source="/0/@componentInstance.5/@featureInstance.8" destination="/0/@componentInstance.9/@featureInstance.2">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedPortConnection.23"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.9" source="/0/@componentInstance.9/@featureInstance.2" destination="/0/@componentInstance.9/@componentInstance.2/@featureInstance.0">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.24/@ownedPortConnection.2"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="Procesor_3.bus_access -> Magistrala_3" complete="true" kind="accessConnection" destination="/0/@componentInstance.2" source="/0/@componentInstance.5/@featureInstance.9">
+      <connectionReference context="/0" source="/0/@componentInstance.5/@featureInstance.9" destination="/0/@componentInstance.2" reverse="true">
+        <connection xsi:type="aadl2:AccessConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedAccessConnection.5"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="Panel_Op.dev_Monety.dostep_do_magistrali -> Magistrala_1" complete="true" kind="accessConnection" destination="/0/@componentInstance.0" source="/0/@componentInstance.6/@componentInstance.0/@featureInstance.1">
+      <connectionReference context="/0/@componentInstance.6" source="/0/@componentInstance.6/@componentInstance.0/@featureInstance.1" destination="/0/@componentInstance.6/@featureInstance.0" reverse="true">
+        <connection xsi:type="aadl2:AccessConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedAccessConnection.0"/>
+      </connectionReference>
+      <connectionReference context="/0" source="/0/@componentInstance.6/@featureInstance.0" destination="/0/@componentInstance.0" reverse="true">
+        <connection xsi:type="aadl2:AccessConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedAccessConnection.0"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="Panel_Op.dev_Piana.dostep_do_magistrali -> Magistrala_2" complete="true" kind="accessConnection" destination="/0/@componentInstance.1" source="/0/@componentInstance.6/@componentInstance.1/@featureInstance.1">
+      <connectionReference context="/0/@componentInstance.6" source="/0/@componentInstance.6/@componentInstance.1/@featureInstance.1" destination="/0/@componentInstance.6/@featureInstance.1" reverse="true">
+        <connection xsi:type="aadl2:AccessConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedAccessConnection.1"/>
+      </connectionReference>
+      <connectionReference context="/0" source="/0/@componentInstance.6/@featureInstance.1" destination="/0/@componentInstance.1" reverse="true">
+        <connection xsi:type="aadl2:AccessConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedAccessConnection.1"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="Panel_Op.dev_Szampon.dostep_do_magistrali -> Magistrala_2" complete="true" kind="accessConnection" destination="/0/@componentInstance.1" source="/0/@componentInstance.6/@componentInstance.2/@featureInstance.1">
+      <connectionReference context="/0/@componentInstance.6" source="/0/@componentInstance.6/@componentInstance.2/@featureInstance.1" destination="/0/@componentInstance.6/@featureInstance.1" reverse="true">
+        <connection xsi:type="aadl2:AccessConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedAccessConnection.2"/>
+      </connectionReference>
+      <connectionReference context="/0" source="/0/@componentInstance.6/@featureInstance.1" destination="/0/@componentInstance.1" reverse="true">
+        <connection xsi:type="aadl2:AccessConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedAccessConnection.1"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="Panel_Op.dev_Splukiwanie.dostep_do_magistrali -> Magistrala_2" complete="true" kind="accessConnection" destination="/0/@componentInstance.1" source="/0/@componentInstance.6/@componentInstance.3/@featureInstance.1">
+      <connectionReference context="/0/@componentInstance.6" source="/0/@componentInstance.6/@componentInstance.3/@featureInstance.1" destination="/0/@componentInstance.6/@featureInstance.1" reverse="true">
+        <connection xsi:type="aadl2:AccessConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedAccessConnection.3"/>
+      </connectionReference>
+      <connectionReference context="/0" source="/0/@componentInstance.6/@featureInstance.1" destination="/0/@componentInstance.1" reverse="true">
+        <connection xsi:type="aadl2:AccessConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedAccessConnection.1"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="Panel_Op.dev_Nablyszczanie.dostep_do_magistrali -> Magistrala_2" complete="true" kind="accessConnection" destination="/0/@componentInstance.1" source="/0/@componentInstance.6/@componentInstance.4/@featureInstance.1">
+      <connectionReference context="/0/@componentInstance.6" source="/0/@componentInstance.6/@componentInstance.4/@featureInstance.1" destination="/0/@componentInstance.6/@featureInstance.1" reverse="true">
+        <connection xsi:type="aadl2:AccessConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedAccessConnection.4"/>
+      </connectionReference>
+      <connectionReference context="/0" source="/0/@componentInstance.6/@featureInstance.1" destination="/0/@componentInstance.1" reverse="true">
+        <connection xsi:type="aadl2:AccessConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedAccessConnection.1"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="Panel_Op.dev_Powloka.dostep_do_magistrali -> Magistrala_2" complete="true" kind="accessConnection" destination="/0/@componentInstance.1" source="/0/@componentInstance.6/@componentInstance.5/@featureInstance.1">
+      <connectionReference context="/0/@componentInstance.6" source="/0/@componentInstance.6/@componentInstance.5/@featureInstance.1" destination="/0/@componentInstance.6/@featureInstance.1" reverse="true">
+        <connection xsi:type="aadl2:AccessConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedAccessConnection.5"/>
+      </connectionReference>
+      <connectionReference context="/0" source="/0/@componentInstance.6/@featureInstance.1" destination="/0/@componentInstance.1" reverse="true">
+        <connection xsi:type="aadl2:AccessConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedAccessConnection.1"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="Panel_Op.dev_Osuszanie.dostep_do_magistrali -> Magistrala_2" complete="true" kind="accessConnection" destination="/0/@componentInstance.1" source="/0/@componentInstance.6/@componentInstance.6/@featureInstance.1">
+      <connectionReference context="/0/@componentInstance.6" source="/0/@componentInstance.6/@componentInstance.6/@featureInstance.1" destination="/0/@componentInstance.6/@featureInstance.1" reverse="true">
+        <connection xsi:type="aadl2:AccessConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedAccessConnection.6"/>
+      </connectionReference>
+      <connectionReference context="/0" source="/0/@componentInstance.6/@featureInstance.1" destination="/0/@componentInstance.1" reverse="true">
+        <connection xsi:type="aadl2:AccessConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedAccessConnection.1"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="Panel_Op.proc_Sterowanie.sygnal_Otwor_na_monety.wyjscie -> Procesor_1.in_monety" complete="true" kind="portConnection" destination="/0/@componentInstance.3/@featureInstance.0" source="/0/@componentInstance.6/@componentInstance.7/@componentInstance.0/@featureInstance.1">
+      <connectionReference context="/0/@componentInstance.6/@componentInstance.7" source="/0/@componentInstance.6/@componentInstance.7/@componentInstance.0/@featureInstance.1" destination="/0/@componentInstance.6/@componentInstance.7/@featureInstance.7">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedPortConnection.1"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.6" source="/0/@componentInstance.6/@componentInstance.7/@featureInstance.7" destination="/0/@componentInstance.6/@featureInstance.2">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedPortConnection.7"/>
+      </connectionReference>
+      <connectionReference context="/0" source="/0/@componentInstance.6/@featureInstance.2" destination="/0/@componentInstance.3/@featureInstance.0">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedPortConnection.0"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="Panel_Op.proc_Sterowanie.sygnal_Piana_Aktywna.wyjscie -> Procesor_1.in_piana" complete="true" kind="portConnection" destination="/0/@componentInstance.3/@featureInstance.1" source="/0/@componentInstance.6/@componentInstance.7/@componentInstance.1/@featureInstance.1">
+      <connectionReference context="/0/@componentInstance.6/@componentInstance.7" source="/0/@componentInstance.6/@componentInstance.7/@componentInstance.1/@featureInstance.1" destination="/0/@componentInstance.6/@componentInstance.7/@featureInstance.8">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedPortConnection.3"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.6" source="/0/@componentInstance.6/@componentInstance.7/@featureInstance.8" destination="/0/@componentInstance.6/@featureInstance.3">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedPortConnection.8"/>
+      </connectionReference>
+      <connectionReference context="/0" source="/0/@componentInstance.6/@featureInstance.3" destination="/0/@componentInstance.3/@featureInstance.1">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedPortConnection.1"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="Panel_Op.proc_Sterowanie.sygnal_Piana_Aktywna.wyjscie -> Procesor_2.in_piana" complete="true" kind="portConnection" destination="/0/@componentInstance.4/@featureInstance.0" source="/0/@componentInstance.6/@componentInstance.7/@componentInstance.1/@featureInstance.1">
+      <connectionReference context="/0/@componentInstance.6/@componentInstance.7" source="/0/@componentInstance.6/@componentInstance.7/@componentInstance.1/@featureInstance.1" destination="/0/@componentInstance.6/@componentInstance.7/@featureInstance.8">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedPortConnection.3"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.6" source="/0/@componentInstance.6/@componentInstance.7/@featureInstance.8" destination="/0/@componentInstance.6/@featureInstance.3">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedPortConnection.8"/>
+      </connectionReference>
+      <connectionReference context="/0" source="/0/@componentInstance.6/@featureInstance.3" destination="/0/@componentInstance.4/@featureInstance.0">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedPortConnection.7"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="Panel_Op.proc_Sterowanie.sygnal_Mycie_Szamponem.wyjscie -> Procesor_1.in_szampon" complete="true" kind="portConnection" destination="/0/@componentInstance.3/@featureInstance.2" source="/0/@componentInstance.6/@componentInstance.7/@componentInstance.2/@featureInstance.1">
+      <connectionReference context="/0/@componentInstance.6/@componentInstance.7" source="/0/@componentInstance.6/@componentInstance.7/@componentInstance.2/@featureInstance.1" destination="/0/@componentInstance.6/@componentInstance.7/@featureInstance.9">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedPortConnection.5"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.6" source="/0/@componentInstance.6/@componentInstance.7/@featureInstance.9" destination="/0/@componentInstance.6/@featureInstance.4">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedPortConnection.9"/>
+      </connectionReference>
+      <connectionReference context="/0" source="/0/@componentInstance.6/@featureInstance.4" destination="/0/@componentInstance.3/@featureInstance.2">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedPortConnection.2"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="Panel_Op.proc_Sterowanie.sygnal_Mycie_Szamponem.wyjscie -> Procesor_2.in_szampon" complete="true" kind="portConnection" destination="/0/@componentInstance.4/@featureInstance.1" source="/0/@componentInstance.6/@componentInstance.7/@componentInstance.2/@featureInstance.1">
+      <connectionReference context="/0/@componentInstance.6/@componentInstance.7" source="/0/@componentInstance.6/@componentInstance.7/@componentInstance.2/@featureInstance.1" destination="/0/@componentInstance.6/@componentInstance.7/@featureInstance.9">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedPortConnection.5"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.6" source="/0/@componentInstance.6/@componentInstance.7/@featureInstance.9" destination="/0/@componentInstance.6/@featureInstance.4">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedPortConnection.9"/>
+      </connectionReference>
+      <connectionReference context="/0" source="/0/@componentInstance.6/@featureInstance.4" destination="/0/@componentInstance.4/@featureInstance.1">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedPortConnection.8"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="Panel_Op.proc_Sterowanie.sygnal_Splukiwanie.wyjscie -> Procesor_1.in_splukiwanie" complete="true" kind="portConnection" destination="/0/@componentInstance.3/@featureInstance.3" source="/0/@componentInstance.6/@componentInstance.7/@componentInstance.3/@featureInstance.1">
+      <connectionReference context="/0/@componentInstance.6/@componentInstance.7" source="/0/@componentInstance.6/@componentInstance.7/@componentInstance.3/@featureInstance.1" destination="/0/@componentInstance.6/@componentInstance.7/@featureInstance.10">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedPortConnection.7"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.6" source="/0/@componentInstance.6/@componentInstance.7/@featureInstance.10" destination="/0/@componentInstance.6/@featureInstance.5">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedPortConnection.10"/>
+      </connectionReference>
+      <connectionReference context="/0" source="/0/@componentInstance.6/@featureInstance.5" destination="/0/@componentInstance.3/@featureInstance.3">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedPortConnection.3"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="Panel_Op.proc_Sterowanie.sygnal_Splukiwanie.wyjscie -> Procesor_2.in_splukiwanie" complete="true" kind="portConnection" destination="/0/@componentInstance.4/@featureInstance.2" source="/0/@componentInstance.6/@componentInstance.7/@componentInstance.3/@featureInstance.1">
+      <connectionReference context="/0/@componentInstance.6/@componentInstance.7" source="/0/@componentInstance.6/@componentInstance.7/@componentInstance.3/@featureInstance.1" destination="/0/@componentInstance.6/@componentInstance.7/@featureInstance.10">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedPortConnection.7"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.6" source="/0/@componentInstance.6/@componentInstance.7/@featureInstance.10" destination="/0/@componentInstance.6/@featureInstance.5">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedPortConnection.10"/>
+      </connectionReference>
+      <connectionReference context="/0" source="/0/@componentInstance.6/@featureInstance.5" destination="/0/@componentInstance.4/@featureInstance.2">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedPortConnection.9"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="Panel_Op.proc_Sterowanie.sygnal_Nablyszczanie.wyjscie -> Procesor_1.in_nablyszczanie" complete="true" kind="portConnection" destination="/0/@componentInstance.3/@featureInstance.4" source="/0/@componentInstance.6/@componentInstance.7/@componentInstance.4/@featureInstance.1">
+      <connectionReference context="/0/@componentInstance.6/@componentInstance.7" source="/0/@componentInstance.6/@componentInstance.7/@componentInstance.4/@featureInstance.1" destination="/0/@componentInstance.6/@componentInstance.7/@featureInstance.11">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedPortConnection.9"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.6" source="/0/@componentInstance.6/@componentInstance.7/@featureInstance.11" destination="/0/@componentInstance.6/@featureInstance.6">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedPortConnection.11"/>
+      </connectionReference>
+      <connectionReference context="/0" source="/0/@componentInstance.6/@featureInstance.6" destination="/0/@componentInstance.3/@featureInstance.4">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedPortConnection.4"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="Panel_Op.proc_Sterowanie.sygnal_Nablyszczanie.wyjscie -> Procesor_2.in_nablyszczanie" complete="true" kind="portConnection" destination="/0/@componentInstance.4/@featureInstance.3" source="/0/@componentInstance.6/@componentInstance.7/@componentInstance.4/@featureInstance.1">
+      <connectionReference context="/0/@componentInstance.6/@componentInstance.7" source="/0/@componentInstance.6/@componentInstance.7/@componentInstance.4/@featureInstance.1" destination="/0/@componentInstance.6/@componentInstance.7/@featureInstance.11">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedPortConnection.9"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.6" source="/0/@componentInstance.6/@componentInstance.7/@featureInstance.11" destination="/0/@componentInstance.6/@featureInstance.6">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedPortConnection.11"/>
+      </connectionReference>
+      <connectionReference context="/0" source="/0/@componentInstance.6/@featureInstance.6" destination="/0/@componentInstance.4/@featureInstance.3">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedPortConnection.10"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="Panel_Op.proc_Sterowanie.sygnal_Powloka_Ochronna.wyjscie -> Procesor_1.in_powloka" complete="true" kind="portConnection" destination="/0/@componentInstance.3/@featureInstance.5" source="/0/@componentInstance.6/@componentInstance.7/@componentInstance.5/@featureInstance.1">
+      <connectionReference context="/0/@componentInstance.6/@componentInstance.7" source="/0/@componentInstance.6/@componentInstance.7/@componentInstance.5/@featureInstance.1" destination="/0/@componentInstance.6/@componentInstance.7/@featureInstance.12">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedPortConnection.11"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.6" source="/0/@componentInstance.6/@componentInstance.7/@featureInstance.12" destination="/0/@componentInstance.6/@featureInstance.7">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedPortConnection.12"/>
+      </connectionReference>
+      <connectionReference context="/0" source="/0/@componentInstance.6/@featureInstance.7" destination="/0/@componentInstance.3/@featureInstance.5">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedPortConnection.5"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="Panel_Op.proc_Sterowanie.sygnal_Powloka_Ochronna.wyjscie -> Procesor_2.in_powloka" complete="true" kind="portConnection" destination="/0/@componentInstance.4/@featureInstance.4" source="/0/@componentInstance.6/@componentInstance.7/@componentInstance.5/@featureInstance.1">
+      <connectionReference context="/0/@componentInstance.6/@componentInstance.7" source="/0/@componentInstance.6/@componentInstance.7/@componentInstance.5/@featureInstance.1" destination="/0/@componentInstance.6/@componentInstance.7/@featureInstance.12">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedPortConnection.11"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.6" source="/0/@componentInstance.6/@componentInstance.7/@featureInstance.12" destination="/0/@componentInstance.6/@featureInstance.7">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedPortConnection.12"/>
+      </connectionReference>
+      <connectionReference context="/0" source="/0/@componentInstance.6/@featureInstance.7" destination="/0/@componentInstance.4/@featureInstance.4">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedPortConnection.11"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="Panel_Op.proc_Sterowanie.sygnal_Osuszanie.wyjscie -> Procesor_1.in_osuszanie" complete="true" kind="portConnection" destination="/0/@componentInstance.3/@featureInstance.6" source="/0/@componentInstance.6/@componentInstance.7/@componentInstance.6/@featureInstance.1">
+      <connectionReference context="/0/@componentInstance.6/@componentInstance.7" source="/0/@componentInstance.6/@componentInstance.7/@componentInstance.6/@featureInstance.1" destination="/0/@componentInstance.6/@componentInstance.7/@featureInstance.13">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedPortConnection.13"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.6" source="/0/@componentInstance.6/@componentInstance.7/@featureInstance.13" destination="/0/@componentInstance.6/@featureInstance.8">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedPortConnection.13"/>
+      </connectionReference>
+      <connectionReference context="/0" source="/0/@componentInstance.6/@featureInstance.8" destination="/0/@componentInstance.3/@featureInstance.6">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedPortConnection.6"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="Panel_Op.proc_Sterowanie.sygnal_Osuszanie.wyjscie -> Procesor_2.in_osuszanie" complete="true" kind="portConnection" destination="/0/@componentInstance.4/@featureInstance.5" source="/0/@componentInstance.6/@componentInstance.7/@componentInstance.6/@featureInstance.1">
+      <connectionReference context="/0/@componentInstance.6/@componentInstance.7" source="/0/@componentInstance.6/@componentInstance.7/@componentInstance.6/@featureInstance.1" destination="/0/@componentInstance.6/@componentInstance.7/@featureInstance.13">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedPortConnection.13"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.6" source="/0/@componentInstance.6/@componentInstance.7/@featureInstance.13" destination="/0/@componentInstance.6/@featureInstance.8">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedPortConnection.13"/>
+      </connectionReference>
+      <connectionReference context="/0" source="/0/@componentInstance.6/@featureInstance.8" destination="/0/@componentInstance.4/@featureInstance.5">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedPortConnection.12"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="Zesp_Zbiornikow.zb_Woda.dostep_do_magistrali -> Magistrala_3" complete="true" kind="accessConnection" destination="/0/@componentInstance.2" source="/0/@componentInstance.8/@componentInstance.0/@featureInstance.2">
+      <connectionReference context="/0/@componentInstance.8" source="/0/@componentInstance.8/@componentInstance.0/@featureInstance.2" destination="/0/@componentInstance.8/@featureInstance.0" reverse="true">
+        <connection xsi:type="aadl2:AccessConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.19/@ownedAccessConnection.0"/>
+      </connectionReference>
+      <connectionReference context="/0" source="/0/@componentInstance.8/@featureInstance.0" destination="/0/@componentInstance.2" reverse="true">
+        <connection xsi:type="aadl2:AccessConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedAccessConnection.2"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="Zesp_Zbiornikow.zb_Piana.dostep_do_magistrali -> Magistrala_3" complete="true" kind="accessConnection" destination="/0/@componentInstance.2" source="/0/@componentInstance.8/@componentInstance.1/@featureInstance.2">
+      <connectionReference context="/0/@componentInstance.8" source="/0/@componentInstance.8/@componentInstance.1/@featureInstance.2" destination="/0/@componentInstance.8/@featureInstance.0" reverse="true">
+        <connection xsi:type="aadl2:AccessConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.19/@ownedAccessConnection.1"/>
+      </connectionReference>
+      <connectionReference context="/0" source="/0/@componentInstance.8/@featureInstance.0" destination="/0/@componentInstance.2" reverse="true">
+        <connection xsi:type="aadl2:AccessConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedAccessConnection.2"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="Zesp_Zbiornikow.zb_Szampon.dostep_do_magistrali -> Magistrala_3" complete="true" kind="accessConnection" destination="/0/@componentInstance.2" source="/0/@componentInstance.8/@componentInstance.2/@featureInstance.2">
+      <connectionReference context="/0/@componentInstance.8" source="/0/@componentInstance.8/@componentInstance.2/@featureInstance.2" destination="/0/@componentInstance.8/@featureInstance.0" reverse="true">
+        <connection xsi:type="aadl2:AccessConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.19/@ownedAccessConnection.2"/>
+      </connectionReference>
+      <connectionReference context="/0" source="/0/@componentInstance.8/@featureInstance.0" destination="/0/@componentInstance.2" reverse="true">
+        <connection xsi:type="aadl2:AccessConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedAccessConnection.2"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="Zesp_Zbiornikow.zb_Nablyszczacz.dostep_do_magistrali -> Magistrala_3" complete="true" kind="accessConnection" destination="/0/@componentInstance.2" source="/0/@componentInstance.8/@componentInstance.3/@featureInstance.2">
+      <connectionReference context="/0/@componentInstance.8" source="/0/@componentInstance.8/@componentInstance.3/@featureInstance.2" destination="/0/@componentInstance.8/@featureInstance.0" reverse="true">
+        <connection xsi:type="aadl2:AccessConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.19/@ownedAccessConnection.3"/>
+      </connectionReference>
+      <connectionReference context="/0" source="/0/@componentInstance.8/@featureInstance.0" destination="/0/@componentInstance.2" reverse="true">
+        <connection xsi:type="aadl2:AccessConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedAccessConnection.2"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="Zesp_Zbiornikow.zb_Powloka.dostep_do_magistrali -> Magistrala_3" complete="true" kind="accessConnection" destination="/0/@componentInstance.2" source="/0/@componentInstance.8/@componentInstance.4/@featureInstance.2">
+      <connectionReference context="/0/@componentInstance.8" source="/0/@componentInstance.8/@componentInstance.4/@featureInstance.2" destination="/0/@componentInstance.8/@featureInstance.0" reverse="true">
+        <connection xsi:type="aadl2:AccessConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.19/@ownedAccessConnection.4"/>
+      </connectionReference>
+      <connectionReference context="/0" source="/0/@componentInstance.8/@featureInstance.0" destination="/0/@componentInstance.2" reverse="true">
+        <connection xsi:type="aadl2:AccessConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedAccessConnection.2"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="Zesp_Zbiornikow.zb_Powietrze.dostep_do_magistrali -> Magistrala_3" complete="true" kind="accessConnection" destination="/0/@componentInstance.2" source="/0/@componentInstance.8/@componentInstance.5/@featureInstance.2">
+      <connectionReference context="/0/@componentInstance.8" source="/0/@componentInstance.8/@componentInstance.5/@featureInstance.2" destination="/0/@componentInstance.8/@featureInstance.0" reverse="true">
+        <connection xsi:type="aadl2:AccessConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.19/@ownedAccessConnection.5"/>
+      </connectionReference>
+      <connectionReference context="/0" source="/0/@componentInstance.8/@featureInstance.0" destination="/0/@componentInstance.2" reverse="true">
+        <connection xsi:type="aadl2:AccessConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedAccessConnection.2"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="Zesp_Zbiornikow.proc_Zbiornikow.sygnal_Zbiornik_Woda.wyjscie -> Procesor_3.in_woda" complete="true" kind="portConnection" destination="/0/@componentInstance.5/@featureInstance.0" source="/0/@componentInstance.8/@componentInstance.6/@componentInstance.0/@featureInstance.1">
+      <connectionReference context="/0/@componentInstance.8/@componentInstance.6" source="/0/@componentInstance.8/@componentInstance.6/@componentInstance.0/@featureInstance.1" destination="/0/@componentInstance.8/@componentInstance.6/@featureInstance.6">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.17/@ownedPortConnection.6"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.8" source="/0/@componentInstance.8/@componentInstance.6/@featureInstance.6" destination="/0/@componentInstance.8/@featureInstance.2">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.19/@ownedPortConnection.12"/>
+      </connectionReference>
+      <connectionReference context="/0" source="/0/@componentInstance.8/@featureInstance.2" destination="/0/@componentInstance.5/@featureInstance.0">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedPortConnection.16"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="Zesp_Zbiornikow.proc_Zbiornikow.sygnal_Zbiornik_Piana.wyjscie -> Procesor_3.in_piana" complete="true" kind="portConnection" destination="/0/@componentInstance.5/@featureInstance.1" source="/0/@componentInstance.8/@componentInstance.6/@componentInstance.1/@featureInstance.1">
+      <connectionReference context="/0/@componentInstance.8/@componentInstance.6" source="/0/@componentInstance.8/@componentInstance.6/@componentInstance.1/@featureInstance.1" destination="/0/@componentInstance.8/@componentInstance.6/@featureInstance.7">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.17/@ownedPortConnection.7"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.8" source="/0/@componentInstance.8/@componentInstance.6/@featureInstance.7" destination="/0/@componentInstance.8/@featureInstance.3">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.19/@ownedPortConnection.13"/>
+      </connectionReference>
+      <connectionReference context="/0" source="/0/@componentInstance.8/@featureInstance.3" destination="/0/@componentInstance.5/@featureInstance.1">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedPortConnection.17"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="Zesp_Zbiornikow.proc_Zbiornikow.sygnal_Zbiornik_Szampon.wyjscie -> Procesor_3.in_szampon" complete="true" kind="portConnection" destination="/0/@componentInstance.5/@featureInstance.2" source="/0/@componentInstance.8/@componentInstance.6/@componentInstance.2/@featureInstance.1">
+      <connectionReference context="/0/@componentInstance.8/@componentInstance.6" source="/0/@componentInstance.8/@componentInstance.6/@componentInstance.2/@featureInstance.1" destination="/0/@componentInstance.8/@componentInstance.6/@featureInstance.8">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.17/@ownedPortConnection.8"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.8" source="/0/@componentInstance.8/@componentInstance.6/@featureInstance.8" destination="/0/@componentInstance.8/@featureInstance.4">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.19/@ownedPortConnection.14"/>
+      </connectionReference>
+      <connectionReference context="/0" source="/0/@componentInstance.8/@featureInstance.4" destination="/0/@componentInstance.5/@featureInstance.2">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedPortConnection.18"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="Zesp_Zbiornikow.proc_Zbiornikow.sygnal_Zbiornik_Nablyszczacz.wyjscie -> Procesor_3.in_nablyszczacz" complete="true" kind="portConnection" destination="/0/@componentInstance.5/@featureInstance.3" source="/0/@componentInstance.8/@componentInstance.6/@componentInstance.3/@featureInstance.1">
+      <connectionReference context="/0/@componentInstance.8/@componentInstance.6" source="/0/@componentInstance.8/@componentInstance.6/@componentInstance.3/@featureInstance.1" destination="/0/@componentInstance.8/@componentInstance.6/@featureInstance.9">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.17/@ownedPortConnection.9"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.8" source="/0/@componentInstance.8/@componentInstance.6/@featureInstance.9" destination="/0/@componentInstance.8/@featureInstance.5">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.19/@ownedPortConnection.15"/>
+      </connectionReference>
+      <connectionReference context="/0" source="/0/@componentInstance.8/@featureInstance.5" destination="/0/@componentInstance.5/@featureInstance.3">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedPortConnection.19"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="Zesp_Zbiornikow.proc_Zbiornikow.sygnal_Zbiornik_Powloka.wyjscie -> Procesor_3.in_powloka" complete="true" kind="portConnection" destination="/0/@componentInstance.5/@featureInstance.4" source="/0/@componentInstance.8/@componentInstance.6/@componentInstance.4/@featureInstance.1">
+      <connectionReference context="/0/@componentInstance.8/@componentInstance.6" source="/0/@componentInstance.8/@componentInstance.6/@componentInstance.4/@featureInstance.1" destination="/0/@componentInstance.8/@componentInstance.6/@featureInstance.10">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.17/@ownedPortConnection.10"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.8" source="/0/@componentInstance.8/@componentInstance.6/@featureInstance.10" destination="/0/@componentInstance.8/@featureInstance.6">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.19/@ownedPortConnection.16"/>
+      </connectionReference>
+      <connectionReference context="/0" source="/0/@componentInstance.8/@featureInstance.6" destination="/0/@componentInstance.5/@featureInstance.4">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedPortConnection.20"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="Zesp_Zbiornikow.proc_Zbiornikow.sygnal_Zbiornik_Powietrze.wyjscie -> Procesor_3.in_powietrze" complete="true" kind="portConnection" destination="/0/@componentInstance.5/@featureInstance.5" source="/0/@componentInstance.8/@componentInstance.6/@componentInstance.5/@featureInstance.1">
+      <connectionReference context="/0/@componentInstance.8/@componentInstance.6" source="/0/@componentInstance.8/@componentInstance.6/@componentInstance.5/@featureInstance.1" destination="/0/@componentInstance.8/@componentInstance.6/@featureInstance.11">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.17/@ownedPortConnection.11"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.8" source="/0/@componentInstance.8/@componentInstance.6/@featureInstance.11" destination="/0/@componentInstance.8/@featureInstance.7">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.19/@ownedPortConnection.17"/>
+      </connectionReference>
+      <connectionReference context="/0" source="/0/@componentInstance.8/@featureInstance.7" destination="/0/@componentInstance.5/@featureInstance.5">
+        <connection xsi:type="aadl2:PortConnection" href="../Myjnia_Pkg.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedPortConnection.21"/>
+      </connectionReference>
+    </connectionInstance>
+    <classifier xsi:type="aadl2:SystemImplementation" href="../Myjnia_Pkg.aadl#Myjnia_Package.Myjnia_Samochodowa.impl"/>
+    <systemOperationMode name="No Modes"/>
+    <componentImplementation xsi:type="aadl2:SystemImplementation" href="../Myjnia_Pkg.aadl#Myjnia_Package.Myjnia_Samochodowa.impl"/>
+  </instance:SystemInstance>
+  <instance:ComponentInstance name="Myjnia_Package::Sygnal" category="data">
+    <classifier xsi:type="aadl2:DataType" href="../Myjnia_Pkg.aadl#Myjnia_Package.Sygnal"/>
+  </instance:ComponentInstance>
+  <instance:ComponentInstance name="Myjnia_Package::Magistrala_Danych" category="bus">
+    <classifier xsi:type="aadl2:BusType" href="../Myjnia_Pkg.aadl#Myjnia_Package.Magistrala_Danych"/>
+  </instance:ComponentInstance>
+</xmi:XMI>
