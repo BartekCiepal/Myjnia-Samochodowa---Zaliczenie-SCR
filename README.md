@@ -85,3 +85,64 @@ Najmniejsza jednostka wykonawcza, realizująca konkretne zadania w czasie rzeczy
     * `Compute_Execution_Time => 1 ms .. 2 ms` (Czas zajętości procesora)
     * `Deadline => 50 ms` (Wymagany czas zakończenia zadania)
 
+---
+
+# 5. Model - rysunek
+
+Poniżej przedstawiono diagram głównego systemu Myjni Samochodowej, wnętrza poszczególnych podsystemów i procesów.
+
+### Diagram główny - System główny Myjni Samochodowej
+Obrazuje system myjni jako całość. Pokazane są połączenia pomiędzy podsystemami, procesorami i magistralami danych
+
+![Główny Diagram Systemu](System_Myjnia_Samochodowa.png)
+
+### Diagram wnętrza podsystemu (Przykład: Proces Zbiorników)
+Obrazuje podział na wątki sterujące poszczególnymi mediami (woda, piana, szampon).
+
+![Diagram Wątków Zbiorników](TUTAJ_WSTAW_NAZWE_PLIKU_Z_WATKAMI.png)
+
+---
+
+# 6. Analiza modelu
+
+## 6.1. Proponowane metody analizy dostępne w OSATE
+W środowisku OSATE przeprowadzono weryfikację poprawności czasowej systemu (Timing & Scheduling Analysis). Wykorzystano wbudowane narzędzie do **Analizy Harmonogramowania (Scheduling Analysis)** oraz sprawdzania budżetu zasobów (Resource Budget).
+
+W celu umożliwienia analizy, model wzbogacono o następujące właściwości czasowe w sekcji `properties`:
+* **Dispatch Protocol:** `Periodic` – wątki uruchamiane są cyklicznie.
+* **Period:** `50 ms` – częstotliwość próbkowania sygnałów sterujących (20 Hz).
+* **Compute Execution Time:** `1 ms .. 2 ms` – szacowany czas zajętości procesora przez pojedynczy wątek.
+* **Deadline:** `50 ms` – zadanie musi zakończyć się przed nadejściem kolejnego cyklu.
+* **Actual Processor Binding:** Przypisano procesy logiczne do konkretnych procesorów sprzętowych (`Procesor_2` i `Procesor_3`).
+
+Jako algorytm partycjonowania wybrano strategię: **Defer Partition of Groups Based on Exec. Time** (partycjonowanie oparte na czasie wykonania).
+
+## 6.2. Wyniki przeprowadzonych analiz
+Analiza została przeprowadzona dla scenariusza "Worst-Case Execution Time" (najdłuższy czas wykonania).
+
+**Wnioski z analizy:**
+1.  **Obciążenie Procesora (Utilization):** Sumaryczne obciążenie procesorów mieści się w dopuszczalnym limicie (100%). Dla zdefiniowanych 6 wątków w `Proces_Zbiornikow`, wykonujących się na `Procesorze_3` (Rozdzielacz), maksymalne zajęcie czasu procesora wynosi 12 ms na każde 50 ms cyklu, co daje utylizację na poziomie **24%**.
+2.  **Harmonogramowalność:** System jest harmonogramowalny. Wszystkie wątki są w stanie zakończyć swoje zadania przed upływem terminu (`Deadline`), co potwierdza brak błędów typu "Deadline Miss" lub "Capacity Exceeded" w raporcie OSATE.
+3.  **Wniosek końcowy:** Zaprojektowana architektura sprzętowa (3 procesory) jest wystarczająca do obsługi założonej logiki sterowania myjnią w czasie rzeczywistym.
+
+---
+
+# 7. Inne informacje zależne od tematu
+
+### Założenia projektowe
+Podczas modelowania przyjęto następujące założenia upraszczające dla systemu wbudowanego:
+* Komunikacja między panelem a sterownikiem odbywa się bez opóźnień sieciowych (idealna magistrala).
+* System działa w trybie ciągłym i jest odporny na zaniki zasilania (nie modelowano stanów awaryjnych zasilania).
+* Logika sterowania zakłada, że sygnały z przycisków są typu "toggle" (włącz/wyłącz) lub "push" (trzymanie przycisku).
+
+### Specyfika sterowania mediami
+Unikalnym elementem projektu jest zastosowanie **Procesora 3 (Rozdzielacz)**, który pełni funkcję inteligentnego routera mediów. W odróżnieniu od klasycznych rozwiązań, gdzie sterowanie jest scentralizowane, tutaj zastosowano architekturę rozproszoną, separującą warstwę płatności (Procesor 1) od warstwy wykonawczej (Procesory 2 i 3), co zwiększa niezawodność i bezpieczeństwo systemu.
+
+---
+
+# 8. Literatura
+
+1.  Feiler, P. H., & Gluch, D. P. (2012). *Model-Based Engineering with AADL: An Introduction to the SAE Architecture Analysis & Design Language*. Addison-Wesley.
+2.  Dokumentacja środowiska OSATE (Open Source AADL Tool Environment), [online]: https://osate.org/
+3.  Standard SAE AS5506C: Architecture Analysis & Design Language (AADL).
+4.  Materiały wykładowe z przedmiotu Systemy Czasu Rzeczywistego.
