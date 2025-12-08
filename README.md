@@ -96,19 +96,44 @@ Obrazuje system myjni jako całość. Pokazane są połączenia pomiędzy podsys
 
 ![Główny Diagram Systemu](System_Myjnia_Samochodowa.png)
 
-### Diagram wnętrza podsystemu (Przykład: Proces Zbiorników)
-Obrazuje podział na wątki sterujące poszczególnymi mediami (woda, piana, szampon).
+### Diagram podsystemu - Panel Operatorski
+Obrazuje schemat ustawiania pracy trybu myjni. Za pomocą otowru na monety wrzuca się odpowiednią kwotę w celu ustawienia czasu pracy myjni. Za pomocą przycisków wybiera się tryb pracy myjni. Te elementy zostały zdefiniowane jako `Device`. Sygnały z urządzeń zadających trafiają do procesu sterowania, którego diagram zostanie przedstawiony poniżej.
 
-![Diagram Wątków Zbiorników](TUTAJ_WSTAW_NAZWE_PLIKU_Z_WATKAMI.png)
+![Diagram Panelu Operatorskiego](System_Panel_Operatorski.png)
+
+### Diagram procesu - Panel Operatorski
+Obrazuje proces sterowania w podsystemie `Panelu Operatorskiego`. Dla każdego sygnału wejściowego stworzony jest wątek, który odpowiada za odpowiednie wysyłanie dalszych sygnałów sterujących
+
+![Diagram Procesu w Panelu Operatorskim](Proces_Panel_Operatorski.png)
+
+### Diagram podsystemu - Panel Informacyjny
+Po przesłąniu odpowiednich sygnałów z Panelu Operatorskiego i przetworzeniu ich przez `Procesor 1` trafiają one na podsystem `Panel Informacyjny`. Wyświetlanie wybranego trybu pracy oraz czasu pracy myjni ponownie zostało zdefiniowane jako `Device`.
+
+![Diagram Panelu Operatorskiego](System_Panel_Informacyjny.png)
+
+### Diagram podsystemu - Zespół Zbiorników
+Po przesłaniu odpowiednich sygnałów z Panelu Operatorskiego i przetworzeniu ich przez `Procesor 2` trafiają one na podsystem `Zespół Zbiorników`. Sygnały odpowiednie do wybranego trybu pracy trafiają do zbiorników z odpowiednim składem chemikaliów. Zbiorniki zostały zdefiniowane jako komponent `Device`. Syganły wychodzące z tych urządzeń trafiają na `proces`, którego opis i diagram zostanie przedstawiony poniżej.
+
+![Diagram Panelu Operatorskiego](System_Zespol_Zbiornikow.png)
+
+### Diagram procesu - Zespół Zbiorników
+Obrazuje proces sterowania w podsystemie `Zespół Zbiornikow`. Dla każdego sygnału wejściowego stworzony jest wątek, który odpowiada za odpowiednie wysteriwania, z którego zbiornika będzie myjnia korzystać w danym trybie pracy i wysłanie ich dalej w systemie.
+
+![Diagram Procesu w Panelu Operatorskim](Proces_Zespol_Zbiornikow.png)
+
+### Diagram podsystemu - Zespół Końcówek
+Po przesłąniu odpowiednich sygnałów z podsystemu `Zespół Zbiorników` i przetworzeniu ich przez `Procesor 3` trafiają one na podsystem `Zespół Końcówek`. Procesor decyduje na podstawie sygnału, z którego zbiornika będzie pobierany środek, którą końcówkę do mycia uruchomić. W podsystemie zdefiniowano trzy różne końcówki za pomocą komponentu `Device`.
+
+![Diagram Panelu Operatorskiego](System_Zespol_Koncowek.png)
 
 ---
 
 # 6. Analiza modelu
 
 ## 6.1. Proponowane metody analizy dostępne w OSATE
-W środowisku OSATE przeprowadzono weryfikację poprawności czasowej systemu (Timing & Scheduling Analysis). Wykorzystano wbudowane narzędzie do **Analizy Harmonogramowania (Scheduling Analysis)** oraz sprawdzania budżetu zasobów (Resource Budget).
+W środowisku OSATE przeprowadzono weryfikację poprawności czasowej systemu (Timing & Scheduling Analysis). Wykorzystano wbudowane narzędzie do **Analizy Harmonogramowania (Scheduling Analysis)** oraz sprawdzania zasobów (Resource Budget).
 
-W celu umożliwienia analizy, model wzbogacono o następujące właściwości czasowe w sekcji `properties`:
+W celu umożliwienia analizy do wątków dodane zostały właściwości czasowe w sekcji `properties`:
 * **Dispatch Protocol:** `Periodic` – wątki uruchamiane są cyklicznie.
 * **Period:** `50 ms` – częstotliwość próbkowania sygnałów sterujących (20 Hz).
 * **Compute Execution Time:** `1 ms .. 2 ms` – szacowany czas zajętości procesora przez pojedynczy wątek.
@@ -117,7 +142,11 @@ W celu umożliwienia analizy, model wzbogacono o następujące właściwości cz
 
 Jako algorytm partycjonowania wybrano strategię: **Defer Partition of Groups Based on Exec. Time** (partycjonowanie oparte na czasie wykonania).
 
-## 6.2. Wyniki przeprowadzonych analiz
+## 6.2. Wyniki przeprowadzonej analizy w Osate
+
+![Wyniki_Analizy](Wynik_Analizy_Procesorow.png)
+
+## 6.3. Wnioski z przeprowadzonej analizy
 Analiza została przeprowadzona dla scenariusza "Worst-Case Execution Time" (najdłuższy czas wykonania).
 
 **Wnioski z analizy:**
@@ -133,10 +162,10 @@ Analiza została przeprowadzona dla scenariusza "Worst-Case Execution Time" (naj
 Podczas modelowania przyjęto następujące założenia upraszczające dla systemu wbudowanego:
 * Komunikacja między panelem a sterownikiem odbywa się bez opóźnień sieciowych (idealna magistrala).
 * System działa w trybie ciągłym i jest odporny na zaniki zasilania (nie modelowano stanów awaryjnych zasilania).
-* Logika sterowania zakłada, że sygnały z przycisków są typu "toggle" (włącz/wyłącz) lub "push" (trzymanie przycisku).
+* Logika sterowania zakłada, że sygnały z przycisków są typu "toggle" (włącz/wyłącz).
 
 ### Specyfika sterowania mediami
-Unikalnym elementem projektu jest zastosowanie **Procesora 3 (Rozdzielacz)**, który pełni funkcję inteligentnego routera mediów. W odróżnieniu od klasycznych rozwiązań, gdzie sterowanie jest scentralizowane, tutaj zastosowano architekturę rozproszoną, separującą warstwę płatności (Procesor 1) od warstwy wykonawczej (Procesory 2 i 3), co zwiększa niezawodność i bezpieczeństwo systemu.
+Unikalnym elementem projektu jest zastosowanie **Procesora 3**, który pełni funkcję inteligentnego routera mediów. W odróżnieniu od klasycznych rozwiązań, gdzie sterowanie jest scentralizowane, tutaj zastosowano architekturę rozproszoną, separującą warstwę płatności (Procesor 1) od warstwy wykonawczej (Procesory 2 i 3), co zwiększa niezawodność i bezpieczeństwo systemu.
 
 ---
 
