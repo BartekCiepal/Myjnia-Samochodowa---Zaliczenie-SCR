@@ -7,16 +7,11 @@ public
   bus Magistrala_Danych
   end Magistrala_Danych;
 
-  -- --------------------------------------------------------
-  -- PROCESORY
-  -- --------------------------------------------------------
+--Procesory
   
-  -- ZMIANA: Procesor 1 teraz widzi też przyciski, żeby wyświetlać info
   processor Procesor_Glowny_Monety
     features
       in_monety: in data port Sygnal;
-      
-      -- Nowe wejścia dla trybów (do wyświetlacza)
       in_piana: in data port Sygnal;
       in_szampon: in data port Sygnal;
       in_splukiwanie: in data port Sygnal;
@@ -58,9 +53,8 @@ public
       bus_access: requires bus access Magistrala_Danych;
   end Procesor_Rozdzielacz;
 
-  -- --------------------------------------------------------
-  -- PODSYSTEM 1: PANEL OPERATORSKI
-  -- --------------------------------------------------------
+--Podsystem 1 - Panel Operatorski
+
   device Otwor_na_monety
     features
       wyjscie: out data port Sygnal;
@@ -77,6 +71,11 @@ public
     features
       wejscie: in data port Sygnal;
       wyjscie: out data port Sygnal;
+    properties
+      Dispatch_Protocol => Periodic;
+      Period => 50 ms;
+      Compute_Execution_Time => 1 ms .. 2 ms;
+      Deadline => 50 ms;
   end Watek_Sygnalu;
 
   process Proces_Panelu_Operatorskiego
@@ -173,9 +172,8 @@ public
       bus_conn_osu: bus access magistrala_2_dostep <-> dev_Osuszanie.dostep_do_magistrali;
   end Panel_Operatorski.impl;
 
-  -- --------------------------------------------------------
-  -- PODSYSTEM 2: PANEL INFORMACYJNY
-  -- --------------------------------------------------------
+-- Podsystem 2 - Panel Informacyjny
+
   device Wyswietlacz
     features
       wejscie: in data port Sygnal;
@@ -196,9 +194,8 @@ public
       c2: port in_wybrany_tryb -> wysw_Tryb.wejscie;
   end Panel_Informacyjny.impl;
 
-  -- --------------------------------------------------------
-  -- PODSYSTEM 3: ZESPÓŁ ZBIORNIKÓW
-  -- --------------------------------------------------------
+-- Podsystem 3 - Zespół Zbiorników
+
   device Zbiornik
     features
       sterowanie: in data port Sygnal;
@@ -300,9 +297,8 @@ public
       bus_zb6: bus access magistrala_3_dostep <-> zb_Powietrze.dostep_do_magistrali;
   end Zespol_Zbiornikow.impl;
 
-  -- --------------------------------------------------------
-  -- PODSYSTEM 4: ZESPÓŁ KOŃCÓWEK
-  -- --------------------------------------------------------
+-- Podsystem 4 - Zespół końcówek
+
   device Lanca
     features
       wlot: in data port Sygnal;
@@ -336,9 +332,8 @@ public
       c3: port in_powietrze -> dev_Kompresor.wlot;
   end Zespol_Koncowek.impl;
 
-  -- --------------------------------------------------------
-  -- SYSTEM GŁÓWNY: MYJNIA SAMOCHODOWA
-  -- --------------------------------------------------------
+-- System główny - Mynia Samochodowa
+
   system Myjnia_Samochodowa
   end Myjnia_Samochodowa;
 
@@ -359,11 +354,8 @@ public
 
     connections
       -- 1. Panel Operatorski -> Procesory
-      
-      -- a) Monety do Procesora 1
       c_monety: port Panel_Op.out_Otwor_na_monety -> Procesor_1.in_monety;
 
-      -- b) Przyciski do Procesora 1 (ZMIANA - info dla wyświetlacza)
       c_info_piana: port Panel_Op.out_Piana_Aktywna -> Procesor_1.in_piana;
       c_info_szampon: port Panel_Op.out_Mycie_Szamponem -> Procesor_1.in_szampon;
       c_info_spluk: port Panel_Op.out_Splukiwanie -> Procesor_1.in_splukiwanie;
@@ -371,7 +363,6 @@ public
       c_info_powl: port Panel_Op.out_Powloka_Ochronna -> Procesor_1.in_powloka;
       c_info_osus: port Panel_Op.out_Osuszanie -> Procesor_1.in_osuszanie;
 
-      -- c) Przyciski do Procesora 2 (sterowanie zbiornikami)
       c_tryb1: port Panel_Op.out_Piana_Aktywna -> Procesor_2.in_piana;
       c_tryb2: port Panel_Op.out_Mycie_Szamponem -> Procesor_2.in_szampon;
       c_tryb3: port Panel_Op.out_Splukiwanie -> Procesor_2.in_splukiwanie;
@@ -379,14 +370,11 @@ public
       c_tryb5: port Panel_Op.out_Powloka_Ochronna -> Procesor_2.in_powloka;
       c_tryb6: port Panel_Op.out_Osuszanie -> Procesor_2.in_osuszanie;
       
-      -- 2. Procesor 1 -> Info
       c_info_czas: port Procesor_1.out_czas -> Panel_Info.in_czas_mycia;
       c_info_tryb: port Procesor_1.out_wybrany_tryb -> Panel_Info.in_wybrany_tryb;
 
-      -- 3. Procesor 2 -> Sterowanie zbiornikami
       c_ster_zbior: port Procesor_2.out_sterowanie_zbiornikami -> Zesp_Zbiornikow.in_sterowanie;
 
-      -- 4. Zbiorniki -> Procesor 3 (Rozdział)
       c_z_woda: port Zesp_Zbiornikow.out_woda -> Procesor_3.in_woda;
       c_z_piana: port Zesp_Zbiornikow.out_piana -> Procesor_3.in_piana;
       c_z_szampon: port Zesp_Zbiornikow.out_szampon -> Procesor_3.in_szampon;
@@ -394,12 +382,10 @@ public
       c_z_powl: port Zesp_Zbiornikow.out_powloka -> Procesor_3.in_powloka;
       c_z_powietrze: port Zesp_Zbiornikow.out_powietrze -> Procesor_3.in_powietrze;
 
-      -- 5. Procesor 3 -> Końcówki
       c_konc_piana: port Procesor_3.out_do_lancy -> Zesp_Koncowek.in_piana;
       c_konc_kompr: port Procesor_3.out_do_kompresora -> Zesp_Koncowek.in_powietrze;
       c_konc_myjka: port Procesor_3.out_do_myjki -> Zesp_Koncowek.in_cisnienie;
 
-      -- Wiązania magistral
       b1_acc_panel: bus access Magistrala_1 <-> Panel_Op.magistrala_1_dostep;
       b2_acc_panel: bus access Magistrala_2 <-> Panel_Op.magistrala_2_dostep;
       b3_acc_zbior: bus access Magistrala_3 <-> Zesp_Zbiornikow.magistrala_3_dostep;
@@ -407,6 +393,11 @@ public
       b1_acc_p1: bus access Magistrala_1 <-> Procesor_1.bus_access;
       b2_acc_p2: bus access Magistrala_2 <-> Procesor_2.bus_access;
       b3_acc_p3: bus access Magistrala_3 <-> Procesor_3.bus_access;
+
+    properties
+      Actual_Processor_Binding => (reference (Procesor_2)) applies to Panel_Op.proc_Sterowanie;
+      
+      Actual_Processor_Binding => (reference (Procesor_3)) applies to Zesp_Zbiornikow.proc_Zbiornikow;
 
   end Myjnia_Samochodowa.impl;
 end Myjnia_Package;
