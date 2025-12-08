@@ -6,6 +6,7 @@
 # 2. Dane studenta
 * **Imię i Nazwisko:** Bartosz Ciepał
 * **E-mail:** bartekciepal@student.agh.edu.pl
+* **Grupa:** Gr. 1, godz. 11.30
 
 ---
 
@@ -150,7 +151,7 @@ Jako algorytm partycjonowania wybrano strategię: **Defer Partition of Groups Ba
 Analiza została przeprowadzona dla scenariusza "Worst-Case Execution Time" (najdłuższy czas wykonania).
 
 **Wnioski z analizy:**
-1.  **Obciążenie Procesora (Utilization):** Sumaryczne obciążenie procesorów mieści się w dopuszczalnym limicie (100%). Dla zdefiniowanych 6 wątków w `Proces_Zbiornikow`, wykonujących się na `Procesorze_3` (Rozdzielacz), maksymalne zajęcie czasu procesora wynosi 12 ms na każde 50 ms cyklu, co daje utylizację na poziomie **24%**.
+1.  **Obciążenie Procesora (Utilization):** Sumaryczne obciążenie procesorów mieści się w dopuszczalnym limicie (100%). Dla zdefiniowanych 6 wątków w `Proces_Zespol_Zbiornikow`, wykonujących się na `Procesorze_3`, maksymalne zajęcie czasu procesora wynosi 12 ms na każde 50 ms cyklu, co daje obciążenie na poziomie **24%**. Dla zdefiniowanych 7 wątków w `Proces_Panel_Operatorski`, wykonujących się na `Procesorze_2`, maksymalne zajęcie czasu procesora wynosi 12 ms na każde 50 ms cyklu, co daje obciążenie na poziomie **29%**.
 2.  **Harmonogramowalność:** System jest harmonogramowalny. Wszystkie wątki są w stanie zakończyć swoje zadania przed upływem terminu (`Deadline`), co potwierdza brak błędów typu "Deadline Miss" lub "Capacity Exceeded" w raporcie OSATE.
 3.  **Wniosek końcowy:** Zaprojektowana architektura sprzętowa (3 procesory) jest wystarczająca do obsługi założonej logiki sterowania myjnią w czasie rzeczywistym.
 
