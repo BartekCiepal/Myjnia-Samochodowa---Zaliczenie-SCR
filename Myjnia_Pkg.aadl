@@ -7,7 +7,8 @@ public
   bus Magistrala_Danych
   end Magistrala_Danych;
 
---Procesory
+
+  --Procesory
   
   processor Procesor_Glowny_Monety
     features
@@ -21,7 +22,9 @@ public
 
       out_czas: out data port Sygnal;
       out_wybrany_tryb: out data port Sygnal;
-      bus_access: requires bus access Magistrala_Danych;
+      
+      bus_access_1: requires bus access Magistrala_Danych;
+      bus_access_2: requires bus access Magistrala_Danych;
   end Procesor_Glowny_Monety;
 
   processor Procesor_Glowny_Tryby
@@ -34,7 +37,9 @@ public
       in_osuszanie: in data port Sygnal;
       
       out_sterowanie_zbiornikami: out data port Sygnal;
-      bus_access: requires bus access Magistrala_Danych;
+      
+      bus_access_2: requires bus access Magistrala_Danych; 
+      bus_access_1: requires bus access Magistrala_Danych; 
   end Procesor_Glowny_Tryby;
 
   processor Procesor_Rozdzielacz
@@ -53,7 +58,7 @@ public
       bus_access: requires bus access Magistrala_Danych;
   end Procesor_Rozdzielacz;
 
---Podsystem 1 - Panel Operatorski
+  --Podsystem 1 - Panel Operatorski
 
   device Otwor_na_monety
     features
@@ -172,17 +177,19 @@ public
       bus_conn_osu: bus access magistrala_2_dostep <-> dev_Osuszanie.dostep_do_magistrali;
   end Panel_Operatorski.impl;
 
--- Podsystem 2 - Panel Informacyjny
+  --Podsystem 2 - Panel Informacyjny
 
   device Wyswietlacz
     features
       wejscie: in data port Sygnal;
+      dostep_do_magistrali: requires bus access Magistrala_Danych;
   end Wyswietlacz;
 
   system Panel_Informacyjny
     features
       in_czas_mycia: in data port Sygnal;
       in_wybrany_tryb: in data port Sygnal;
+      magistrala_1_dostep: requires bus access Magistrala_Danych;
   end Panel_Informacyjny;
 
   system implementation Panel_Informacyjny.impl
@@ -192,15 +199,18 @@ public
     connections
       c1: port in_czas_mycia -> wysw_Czas.wejscie;
       c2: port in_wybrany_tryb -> wysw_Tryb.wejscie;
+      bus_c1: bus access magistrala_1_dostep <-> wysw_Czas.dostep_do_magistrali;
+      bus_c2: bus access magistrala_1_dostep <-> wysw_Tryb.dostep_do_magistrali;
   end Panel_Informacyjny.impl;
 
--- Podsystem 3 - Zespół Zbiorników
+  --Podsystem 3 - Zespół Zbiorników
 
   device Zbiornik
     features
       sterowanie: in data port Sygnal;
       odplyw: out data port Sygnal;
-      dostep_do_magistrali: requires bus access Magistrala_Danych;
+      dostep_sterowanie: requires bus access Magistrala_Danych;
+      dostep_odplyw: requires bus access Magistrala_Danych;
   end Zbiornik;
 
   process Proces_Zbiornikow
@@ -256,6 +266,7 @@ public
       out_powietrze: out data port Sygnal;
       
       magistrala_3_dostep: requires bus access Magistrala_Danych;
+      magistrala_2_dostep: requires bus access Magistrala_Danych;
   end Zespol_Zbiornikow;
 
   system implementation Zespol_Zbiornikow.impl
@@ -289,29 +300,39 @@ public
       c_out5: port proc_Zbiornikow.out_powloka -> out_powloka;
       c_out6: port proc_Zbiornikow.out_powietrze -> out_powietrze;
 
-      bus_zb1: bus access magistrala_3_dostep <-> zb_Woda.dostep_do_magistrali;
-      bus_zb2: bus access magistrala_3_dostep <-> zb_Piana.dostep_do_magistrali;
-      bus_zb3: bus access magistrala_3_dostep <-> zb_Szampon.dostep_do_magistrali;
-      bus_zb4: bus access magistrala_3_dostep <-> zb_Nablyszczacz.dostep_do_magistrali;
-      bus_zb5: bus access magistrala_3_dostep <-> zb_Powloka.dostep_do_magistrali;
-      bus_zb6: bus access magistrala_3_dostep <-> zb_Powietrze.dostep_do_magistrali;
+      bus_zb1_in: bus access magistrala_2_dostep <-> zb_Woda.dostep_sterowanie;
+      bus_zb1_out: bus access magistrala_3_dostep <-> zb_Woda.dostep_odplyw;
+      bus_zb2_in: bus access magistrala_2_dostep <-> zb_Piana.dostep_sterowanie;
+      bus_zb2_out: bus access magistrala_3_dostep <-> zb_Piana.dostep_odplyw;
+      bus_zb3_in: bus access magistrala_2_dostep <-> zb_Szampon.dostep_sterowanie;
+      bus_zb3_out: bus access magistrala_3_dostep <-> zb_Szampon.dostep_odplyw;
+      bus_zb4_in: bus access magistrala_2_dostep <-> zb_Nablyszczacz.dostep_sterowanie;
+      bus_zb4_out: bus access magistrala_3_dostep <-> zb_Nablyszczacz.dostep_odplyw;
+      bus_zb5_in: bus access magistrala_2_dostep <-> zb_Powloka.dostep_sterowanie;
+      bus_zb5_out: bus access magistrala_3_dostep <-> zb_Powloka.dostep_odplyw;
+      bus_zb6_in: bus access magistrala_2_dostep <-> zb_Powietrze.dostep_sterowanie;
+      bus_zb6_out: bus access magistrala_3_dostep <-> zb_Powietrze.dostep_odplyw;
   end Zespol_Zbiornikow.impl;
 
--- Podsystem 4 - Zespół końcówek
+
+  --Podsystem 4 - Zespół Końcówek
 
   device Lanca
     features
       wlot: in data port Sygnal;
+      dostep_do_magistrali: requires bus access Magistrala_Danych;
   end Lanca;
 
   device Myjka
     features
       wlot: in data port Sygnal;
+      dostep_do_magistrali: requires bus access Magistrala_Danych;
   end Myjka;
 
   device Kompresor
     features
       wlot: in data port Sygnal;
+      dostep_do_magistrali: requires bus access Magistrala_Danych;
   end Kompresor;
 
   system Zespol_Koncowek
@@ -319,6 +340,7 @@ public
       in_piana: in data port Sygnal;
       in_cisnienie: in data port Sygnal;
       in_powietrze: in data port Sygnal;
+      magistrala_3_dostep: requires bus access Magistrala_Danych;
   end Zespol_Koncowek;
 
   system implementation Zespol_Koncowek.impl
@@ -330,9 +352,13 @@ public
       c1: port in_piana -> dev_Lanca_Piany.wlot;
       c2: port in_cisnienie -> dev_Myjka_Cisnieniowa.wlot;
       c3: port in_powietrze -> dev_Kompresor.wlot;
+      
+      bus_c1: bus access magistrala_3_dostep <-> dev_Lanca_Piany.dostep_do_magistrali;
+      bus_c2: bus access magistrala_3_dostep <-> dev_Myjka_Cisnieniowa.dostep_do_magistrali;
+      bus_c3: bus access magistrala_3_dostep <-> dev_Kompresor.dostep_do_magistrali;
   end Zespol_Koncowek.impl;
 
--- System główny - Mynia Samochodowa
+  --System Główny - Myjnia Samochodowa
 
   system Myjnia_Samochodowa
   end Myjnia_Samochodowa;
@@ -385,19 +411,63 @@ public
       c_konc_piana: port Procesor_3.out_do_lancy -> Zesp_Koncowek.in_piana;
       c_konc_kompr: port Procesor_3.out_do_kompresora -> Zesp_Koncowek.in_powietrze;
       c_konc_myjka: port Procesor_3.out_do_myjki -> Zesp_Koncowek.in_cisnienie;
-
+      
+      -- Panel <-> Magistrala 1 i 2
       b1_acc_panel: bus access Magistrala_1 <-> Panel_Op.magistrala_1_dostep;
       b2_acc_panel: bus access Magistrala_2 <-> Panel_Op.magistrala_2_dostep;
-      b3_acc_zbior: bus access Magistrala_3 <-> Zesp_Zbiornikow.magistrala_3_dostep;
       
-      b1_acc_p1: bus access Magistrala_1 <-> Procesor_1.bus_access;
-      b2_acc_p2: bus access Magistrala_2 <-> Procesor_2.bus_access;
+      -- Procesor 1 <-> Magistrala 1 i 2
+      b1_acc_p1: bus access Magistrala_1 <-> Procesor_1.bus_access_1;
+      b2_acc_p1: bus access Magistrala_2 <-> Procesor_1.bus_access_2;
+      
+      -- Procesor 2 <-> Magistrala 2
+      b2_acc_p2: bus access Magistrala_2 <-> Procesor_2.bus_access_2;
+      b1_acc_p2: bus access Magistrala_1 <-> Procesor_2.bus_access_1;
+      
+      -- Panel Info <-> Magistrala 1
+      b1_acc_info: bus access Magistrala_1 <-> Panel_Info.magistrala_1_dostep;
+
+      -- Zbiorniki <-> Magistrala 2 i 3
+      b2_acc_zbior_in: bus access Magistrala_2 <-> Zesp_Zbiornikow.magistrala_2_dostep;
+      b3_acc_zbior_out: bus access Magistrala_3 <-> Zesp_Zbiornikow.magistrala_3_dostep;
+      
+      -- Procesor 3 <-> Magistrala 3
       b3_acc_p3: bus access Magistrala_3 <-> Procesor_3.bus_access;
+      
+      -- Końcówki <-> Magistrala 3
+      b3_acc_konc: bus access Magistrala_3 <-> Zesp_Koncowek.magistrala_3_dostep;
 
     properties
       Actual_Processor_Binding => (reference (Procesor_2)) applies to Panel_Op.proc_Sterowanie;
-      
       Actual_Processor_Binding => (reference (Procesor_3)) applies to Zesp_Zbiornikow.proc_Zbiornikow;
+
+      Actual_Connection_Binding => (reference (Magistrala_1)) applies to c_monety;
+      Actual_Connection_Binding => (reference (Magistrala_1)) applies to c_info_czas;
+      Actual_Connection_Binding => (reference (Magistrala_1)) applies to c_info_tryb;
+      
+      Actual_Connection_Binding => (reference (Magistrala_2)) applies to c_info_piana;
+      Actual_Connection_Binding => (reference (Magistrala_2)) applies to c_info_szampon;
+      Actual_Connection_Binding => (reference (Magistrala_2)) applies to c_info_spluk;
+      Actual_Connection_Binding => (reference (Magistrala_2)) applies to c_info_nabl;
+      Actual_Connection_Binding => (reference (Magistrala_2)) applies to c_info_powl;
+      Actual_Connection_Binding => (reference (Magistrala_2)) applies to c_info_osus;
+      Actual_Connection_Binding => (reference (Magistrala_2)) applies to c_tryb1;
+      Actual_Connection_Binding => (reference (Magistrala_2)) applies to c_tryb2;
+      Actual_Connection_Binding => (reference (Magistrala_2)) applies to c_tryb3;
+      Actual_Connection_Binding => (reference (Magistrala_2)) applies to c_tryb4;
+      Actual_Connection_Binding => (reference (Magistrala_2)) applies to c_tryb5;
+      Actual_Connection_Binding => (reference (Magistrala_2)) applies to c_tryb6; 
+      Actual_Connection_Binding => (reference (Magistrala_2)) applies to c_ster_zbior;
+
+      Actual_Connection_Binding => (reference (Magistrala_3)) applies to c_z_woda;
+      Actual_Connection_Binding => (reference (Magistrala_3)) applies to c_z_piana;
+      Actual_Connection_Binding => (reference (Magistrala_3)) applies to c_z_szampon;
+      Actual_Connection_Binding => (reference (Magistrala_3)) applies to c_z_nabl;
+      Actual_Connection_Binding => (reference (Magistrala_3)) applies to c_z_powl;
+      Actual_Connection_Binding => (reference (Magistrala_3)) applies to c_z_powietrze;
+      Actual_Connection_Binding => (reference (Magistrala_3)) applies to c_konc_piana;
+      Actual_Connection_Binding => (reference (Magistrala_3)) applies to c_konc_kompr;
+      Actual_Connection_Binding => (reference (Magistrala_3)) applies to c_konc_myjka;
 
   end Myjnia_Samochodowa.impl;
 end Myjnia_Package;
